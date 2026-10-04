@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QuantScope | 髙橋 春喜</title>
 <meta name="description" content="顕微鏡の画像や医用画像を、ぼかし→二値化→形を整える、と手順を積み重ねて解析し、細胞の核や粒子の数・面積・形・明るさを測るアプリ。免疫染色の陽性率も出せます。手順は「レシピ」として保存してフォルダーの画像に一括でかけられ、どの手順も「しくみ」を読みながら試せるので、画像処理を学ぶ教材にもなります。">
-<meta name="theme-color" content="#0A1210">
+<meta name="theme-color" content="#0d1b24" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fcf9f9" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -15,104 +16,85 @@
 <meta property="og:image" content="https://haru-ki417.github.io/portfolio/assets/og-image.png">
 <meta property="og:url" content="https://haru-ki417.github.io/portfolio/case-09.html">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){var d=document.documentElement,t=null;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';d.setAttribute('data-theme',t)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}#preloader{display:none!important}.diagram .dbox,.diagram .dpath{stroke-dashoffset:0!important}.diagram text{opacity:1!important}</style></noscript>
 </head>
 <body>
+<a class="skip" href="#main">本文へ</a>
 
-<div id="preloader"><svg viewBox="0 0 200 56"><path class="pl-line" d="M0,28 L60,28 L72,28 L82,8 L94,48 L104,14 L116,28 L136,28 L200,28"/></svg></div>
-<div id="scrollbar"></div>
-<div id="cursor-glow"></div>
-
-<header class="topnav">
-  <div class="wrap">
-    <div class="brand"><a href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" stroke-width="2"/><path d="M8,33 L20,33 L24,33 L27,20 L31,46 L35,15 L38,33 L56,33" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Haruki Takahashi</span></a></div>
-    <nav>
-      <div class="nav-links">
-        <a href="index.html#about">About</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#achievements">Activities</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="nav-tools">
-        <a class="lang-link" href="en.html#p-quant" hreflang="en">EN</a>
-        <button class="icon-btn" id="theme-toggle" aria-label="テーマ切り替え" type="button"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg></button>
-        <button class="hamburger-btn" id="hamburger-btn" aria-label="メニュー" aria-controls="mobile-menu" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-      </div>
-    </nav>
-  </div>
-  <div class="mobile-menu" id="mobile-menu">
-    <div class="wrap">
-      <a href="index.html#about">About</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#achievements">Activities</a>
-      <a href="index.html#contact">Contact</a>
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9"/><path d="M5 21h8l2.5-7 4 14 3-10 2 3h10.5"/></svg><span>髙橋 春喜</span></a>
+    <nav class="nav" aria-label="ページ内"><a href="index.html#projects">制作物</a><a href="index.html#skills">技術</a><a href="index.html#about">経歴</a><a href="index.html#contact">連絡</a></nav>
+    <div class="tools">
+      <a class="lang" href="en.html#p-quant" hreflang="en" lang="en">English</a>
+      <button class="theme" id="theme" type="button" aria-label="テーマを切り替える"><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.6 6.6 0 0 0 9.7 9.7z"/></svg></button>
     </div>
   </div>
 </header>
 
-<main>
-<section class="detail-hero">
-  <div class="hero-grid"></div>
-  <div class="wrap reveal">
-    <a class="back-link" href="index.html#p-quant">← 制作物一覧に戻る</a>
-    <div class="p-kicker">CASE 09 — IMAGE ANALYSIS × WEB</div>
+<main id="main" class="case c-img">
+<section class="case-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#p-quant">制作物の一覧へ</a>
+    <div class="case-tags"><span class="tag t-img">医療画像</span><span class="tag plain">顕微鏡画像 × 画像解析</span></div>
     <h1>QuantScope</h1>
     <p class="lede">顕微鏡の画像や医用画像を、ぼかし→二値化→形を整える、と手順を積み重ねて解析し、細胞の核や粒子の数・面積・形・明るさを測るアプリ。免疫染色の陽性率も出せます。手順は「レシピ」として保存してフォルダーの画像に一括でかけられ、どの手順も「しくみ」を読みながら試せるので、画像処理を学ぶ教材にもなります。</p>
-    <dl class="detail-meta"><div><dt>TYPE</dt><dd>個人開発</dd></div><div><dt>ROLE</dt><dd>設計・実装・画像処理アルゴリズム</dd></div><div><dt>PLATFORM</dt><dd>Windows (WPF / .NET 10) ・ ブラウザー</dd></div><div><dt>LINKS</dt><dd><a href="https://haru-ki417.github.io/QuantScope/" target="_blank" rel="noopener">ブラウザーで開く ↗</a><br><a href="https://github.com/haru-ki417/QuantScope" target="_blank" rel="noopener">GitHub ↗</a></dd></div></dl>
+    <div class="case-try"><button class="btn primary sm" type="button" data-try="https://haru-ki417.github.io/QuantScope/" data-title="QuantScope" data-device="desktop" data-note="「見本」から、蛍光の細胞核や免疫染色の画像を開けます。">その場で試す</button></div>
+    <dl class="case-meta"><div><dt>形態</dt><dd>個人開発</dd></div><div><dt>担当</dt><dd>設計・実装・画像処理アルゴリズム</dd></div><div><dt>動く環境</dt><dd>Windows (WPF / .NET 10) ・ ブラウザー</dd></div><div><dt>リンク</dt><dd><a href="https://haru-ki417.github.io/QuantScope/" target="_blank" rel="noopener">ブラウザーで開く ↗</a><br><a href="https://github.com/haru-ki417/QuantScope" target="_blank" rel="noopener">GitHub ↗</a></dd></div></dl>
   </div>
 </section>
-
-<section class="detail-body">
+<section class="case-body">
   <div class="wrap">
-    <div class="reveal"><div class="detail-gallery"><figure class="detail-visual"><a href="assets/qs-nuclei.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/qs-nuclei.jpg" width="1400" height="851" alt="QuantScopeで蛍光の核を数えた画面"></a><figcaption>蛍光の細胞核を数えた結果 — 核ごとに色分けし、右に粒ごとの計測値</figcaption></figure></div><div class="detail-gallery two"><figure class="detail-visual"><a href="assets/qs-ihc.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/qs-ihc.jpg" width="1400" height="851" alt="免疫染色の陽性率を出した画面" loading="lazy"></a><figcaption>免疫染色 — 核ごとのDABの量で陽性(マゼンタ)と陰性(水色)に分ける</figcaption></figure><figure class="detail-visual"><a href="assets/qs-stain.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/qs-stain.jpg" width="1400" height="851" alt="染色を分けて比べる画面" loading="lazy"></a><figcaption>「染色を分ける」でDABだけを取り出し、元の画像と左右に比べる</figcaption></figure></div></div>
-    <div class="detail-cols">
-      <nav class="toc" aria-label="目次"><div class="toc-label">CONTENTS</div><ol><li><a href="#overview">概要</a></li><li><a href="#try">試してみる</a></li><li><a href="#features">できること</a></li><li><a href="#algo">しくみ(すべて自作)</a></li><li><a href="#tests">テストで確かめたこと</a></li><li><a href="#remake">元のアプリからの改善</a></li></ol></nav>
-      <div>
-        <section class="dsec reveal" id="overview"><span class="sec-num">01</span><h2>概要</h2><p>処理を1回ずつ画像に上書きするのではなく、<strong>手順の並び(レシピ)</strong>として持ちます。値を変えると、その手順から先だけを計算し直すので、しきい値やぼかしの強さを試しながら結果を確かめられます。</p><table class="spec-table"><tr><td>プラットフォーム</td><td>Windows デスクトップ(WPF / .NET 10)・ブラウザー(Blazor WebAssembly)</td></tr><tr><td>開発形態</td><td>個人開発</td></tr><tr><td>主な技術</td><td>C#, MVVM, 画像処理と計測の自作(外部の画像処理ライブラリなし), カラーデコンボリューション, xUnit, GitHub Actions</td></tr><tr><td>ライセンス</td><td>MIT License</td></tr></table><div class="callout"><b>NOTE</b>研究・学習用のソフトウェアです。医療機器ではなく、診断には使えません。</div></section><section class="dsec reveal" id="try"><span class="sec-num">02</span><h2>試してみる</h2><p class="web-try"><b>ブラウザー版</b> <a href="https://haru-ki417.github.io/QuantScope/" target="_blank" rel="noopener">haru-ki417.github.io/QuantScope/</a> — スマホ・タブレット・パソコンで、インストールなしで使えます。画像はブラウザーの中だけで処理し、どこにも送りません。</p><ol class="steps"><li>「見本」から、蛍光の核・染色した組織・免疫染色・形の見本を開くと、手順の例が入った状態で始まります(人工の画像なので、データがなくても試せます)。</li><li>左の列の「手順」を選ぶと、その時点の画像と、決める値・しくみが出ます。値を変えると結果がすぐ変わります。</li><li>結果は、画像・手順と値・計測の条件・分布をまとめた解析レポート(HTML)や、CSVで保存できます。</li></ol></section><section class="dsec reveal" id="features"><span class="sec-num">03</span><h2>できること</h2><ul class="feat-list"><li><b>読み込み</b>: PNG・JPEG・TIFF(16 bitの白黒・カラーも)・BMP・GIF・DICOM(CTのHU、画素間隔を縮尺に)</li><li><b>31種類の処理</b>: 白黒・染色を分ける・自動コントラスト・CLAHE・ぼかし・背景のむらの補正・しきい値(大津・三角法・反復法)・k-means・膨張と収縮・穴埋め・くっついた粒を分ける・大きさと形で選ぶ</li><li><b>計測</b>: 粒ごとに面積・周囲長・円形度・相当直径・楕円・フェレ径・充実度・明るさ。全体の数・占有率・密度</li><li><b>陽性率</b>: ヘマトキシリン・エオシン・DABの量を粒ごとに測り、しきい値(自動は大津の方法)で陽性・陰性に分ける</li><li><b>確かめる・直す</b>: 表から粒へ移動、元の画像と左右に比べる、ゴミをクリックで数から除く(除いた数はレポートに残る)</li><li><b>一括処理とレポート</b>: フォルダーの画像に同じレシピをかけ、CSVと確認用の画像を書き出す</li></ul></section><section class="dsec reveal" id="algo"><span class="sec-num">04</span><h2>しくみ(すべて自作)</h2><ol class="pipeline"><li><b>前処理</b>ぼかし・コントラスト</li><li><b>二値化</b>大津の方法など</li><li><b>形を整える</b>距離変換で正確な円</li><li><b>分ける</b>ウォーターシェッド</li><li><b>計測</b>輪郭・モーメント・凸包</li></ol><ul class="feat-list"><li><b>膨張・収縮</b>: ユークリッド距離変換(Felzenszwalb–Huttenlocher)で、半径が大きくても速く、形が正確な円になる</li><li><b>くっついた粒を分ける</b>: 距離変換の山を高い順に満たし、別々の山がぶつかる所に1画素の切れ目を入れる。くぼみの浅い山は「持続性」で同じ粒にまとめ、楕円が割れすぎないようにした</li><li><b>周囲長</b>: Moore近傍で輪郭をなぞり、チェーンコードに重みをかける(画素の階段をそのまま数えると、円で数%長くなる)</li><li><b>染色を分ける</b>: 吸光度は染料の量に比例して足し合わさる(Lambert–Beer)。染料の色ベクトルで作った行列の逆行列で、画素ごとに染料の量に分ける</li></ul></section><section class="dsec reveal" id="tests"><span class="sec-num">05</span><h2>テストで確かめたこと</h2><p>73件のテストで、計算の正しさを数値で確かめています。</p><ul class="feat-list"><li>円の面積が理論値の1%以内・周囲長3%以内・円形度0.95以上。正方形のフェレ径が対角線になる</li><li>距離変換が総当たりの計算と一致し、膨張が正確な円の格子点の数になる</li><li><b>見本の蛍光の核(70個、うち6組はくっついている)を、レシピどおりに数えると70個</b></li><li>免疫染色の見本で、核の数と陽性の数が正解と合い、陽性と判定した粒はすべて本当に陽性の核の上にある</li><li>CSVは地域の設定によらず小数点が「.」で、表計算ソフトで式として実行されない。レポートのファイル名などはスクリプトとして実行されない</li></ul></section><section class="dsec reveal" id="remake"><span class="sec-num">06</span><h2>元のアプリからの改善</h2><p>授業の課題で作った画像処理アプリ(WinForms)が出発点です。</p><ul class="feat-list"><li>処理を画像に上書きするのをやめ、レシピとして持っていつでも値を直せるようにした</li><li>「しきい値以上の画素を数える」だけだった面積を、粒ごとの計測(ラベリング・形・明るさ)と、範囲・縮尺を使った値にした</li><li>画素ごとのGetPixelをやめ、配列と並列処理に(2000×1500のカラー画像で、ほとんどの手順が0.1〜0.8秒)</li><li>ソースコードに直接書かれていたAPIキーをやめ、使う人が設定してDPAPIで暗号化して保存する形にした</li><li>同じ計算の部品をWebAssemblyにして、スマホでも使えるブラウザー版を作った</li></ul></section>
-        <nav class="case-nav reveal" aria-label="制作物ナビゲーション"><a class="prev" href="case-08.html"><span class="cn-dir">← PREVIOUS</span><span class="cn-title">VolumeScope</span></a><a class="next" href="index.html#projects"><span class="cn-dir">ALL PROJECTS →</span><span class="cn-title">制作物一覧</span></a></nav>
+    <div class="case-gallery"><div class="detail-gallery"><figure class="detail-visual"><a href="assets/qs-nuclei.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/qs-nuclei.jpg" width="1400" height="851" alt="QuantScopeで蛍光の核を数えた画面"></a><figcaption>蛍光の細胞核を数えた結果 — 核ごとに色分けし、右に粒ごとの計測値</figcaption></figure></div><div class="detail-gallery two"><figure class="detail-visual"><a href="assets/qs-ihc.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/qs-ihc.jpg" width="1400" height="851" alt="免疫染色の陽性率を出した画面" loading="lazy"></a><figcaption>免疫染色 — 核ごとのDABの量で陽性(マゼンタ)と陰性(水色)に分ける</figcaption></figure><figure class="detail-visual"><a href="assets/qs-stain.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/qs-stain.jpg" width="1400" height="851" alt="染色を分けて比べる画面" loading="lazy"></a><figcaption>「染色を分ける」でDABだけを取り出し、元の画像と左右に比べる</figcaption></figure></div></div>
+    <div class="case-cols">
+      <nav class="toc" aria-label="目次"><ol><li><a href="#overview">概要</a></li><li><a href="#arch">構成図</a></li><li><a href="#try">試してみる</a></li><li><a href="#features">できること</a></li><li><a href="#algo">しくみ(すべて自作)</a></li><li><a href="#tests">テストで確かめたこと</a></li><li><a href="#remake">元のアプリからの改善</a></li></ol></nav>
+      <div class="case-main">
+        <section class="dsec" id="overview"><h2>概要</h2><p>処理を1回ずつ画像に上書きするのではなく、<strong>手順の並び(レシピ)</strong>として持ちます。値を変えると、その手順から先だけを計算し直すので、しきい値やぼかしの強さを試しながら結果を確かめられます。</p><table class="spec-table"><tr><td>プラットフォーム</td><td>Windows デスクトップ(WPF / .NET 10)・ブラウザー(Blazor WebAssembly)</td></tr><tr><td>開発形態</td><td>個人開発</td></tr><tr><td>主な技術</td><td>C#, MVVM, 画像処理と計測の自作(外部の画像処理ライブラリなし), カラーデコンボリューション, xUnit, GitHub Actions</td></tr><tr><td>ライセンス</td><td>MIT License</td></tr></table><div class="callout"><b>補足</b>研究・学習用のソフトウェアです。医療機器ではなく、診断には使えません。</div></section><section class="dsec" id="arch"><h2>構成図</h2><p>データの流れに沿って、部品が順に光ります。</p><figure class="arch" data-arch><div class="arch-scroll"><svg class="arch-svg" viewBox="0 0 860 214" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="構成図 — 手順を積み重ねて、粒を数えて測る"><defs><marker id="ah-quant" markerWidth="9" markerHeight="9" refX="6.5" refY="3.5" orient="auto"><path class="am" d="M0,0 L7,3.5 L0,7 Z"/></marker></defs><path class="ae" style="--s:1" d="M194,55.0 L234,55.0" pathLength="1" marker-end="url(#ah-quant)"/><path class="ae" style="--s:2" d="M408,55.0 L448,55.0" pathLength="1" marker-end="url(#ah-quant)"/><path class="ae" style="--s:3" d="M622,55.0 L662,55.0" pathLength="1" marker-end="url(#ah-quant)"/><path class="ae" style="--s:4" d="M751.0,86 L751.0,124" pathLength="1" marker-end="url(#ah-quant)"/><path class="ae" style="--s:2" d="M323.0,86 L323.0,124" pathLength="1" marker-end="url(#ah-quant)"/><path class="ae" style="--s:3" d="M408,159.0 L448,159.0" pathLength="1" marker-end="url(#ah-quant)"/><path class="ae" style="--s:4" d="M666,55.0 L537.0,55.0 L537.0,124" pathLength="1" marker-end="url(#ah-quant)"/><circle class="ap" r="3.6" style="--s:1"><animateMotion dur="1.5s" repeatCount="indefinite" begin="indefinite" path="M194,55.0 L234,55.0"/></circle><circle class="ap" r="3.6" style="--s:2"><animateMotion dur="1.5s" repeatCount="indefinite" begin="indefinite" path="M408,55.0 L448,55.0"/></circle><circle class="ap" r="3.6" style="--s:3"><animateMotion dur="1.5s" repeatCount="indefinite" begin="indefinite" path="M622,55.0 L662,55.0"/></circle><circle class="ap" r="3.6" style="--s:4"><animateMotion dur="1.5s" repeatCount="indefinite" begin="indefinite" path="M751.0,86 L751.0,124"/></circle><circle class="ap" r="3.6" style="--s:2"><animateMotion dur="1.5s" repeatCount="indefinite" begin="indefinite" path="M323.0,86 L323.0,124"/></circle><circle class="ap" r="3.6" style="--s:3"><animateMotion dur="1.5s" repeatCount="indefinite" begin="indefinite" path="M408,159.0 L448,159.0"/></circle><circle class="ap" r="3.6" style="--s:4"><animateMotion dur="1.5s" repeatCount="indefinite" begin="indefinite" path="M666,55.0 L537.0,55.0 L537.0,124"/></circle><g class="an" style="--s:0"><rect x="24" y="24" width="170" height="62" rx="10"/><text class="at" x="109.0" y="51.0">画像</text><text class="as" x="109.0" y="70.0">PNG・16 bit TIFF・DICOM</text></g><g class="an core" style="--s:1"><rect x="238" y="24" width="170" height="62" rx="10"/><text class="at" x="323.0" y="51.0">レシピ</text><text class="as" x="323.0" y="70.0">31 種類の処理を積み重ね</text></g><g class="an" style="--s:2"><rect x="452" y="24" width="170" height="62" rx="10"/><text class="at" x="537.0" y="51.0">二値化したマスク</text><text class="as" x="537.0" y="70.0">くっついた粒も分ける</text></g><g class="an" style="--s:3"><rect x="666" y="24" width="170" height="62" rx="10"/><text class="at" x="751.0" y="51.0">粒ごとの計測</text><text class="as" x="751.0" y="70.0">面積・形・明るさ</text></g><g class="an" style="--s:4"><rect x="666" y="128" width="170" height="62" rx="10"/><text class="at" x="751.0" y="155.0">陽性率</text><text class="as" x="751.0" y="174.0">染色を分けて DAB の量</text></g><g class="an" style="--s:2"><rect x="238" y="128" width="170" height="62" rx="10"/><text class="at" x="323.0" y="155.0">一括処理</text><text class="as" x="323.0" y="174.0">フォルダーの画像すべて</text></g><g class="an" style="--s:4"><rect x="452" y="128" width="170" height="62" rx="10"/><text class="at" x="537.0" y="155.0">レポート・CSV</text><text class="as" x="537.0" y="174.0">条件と結果を残す</text></g></svg></div><figcaption>構成図 — 手順を積み重ねて、粒を数えて測る<button class="arch-replay" type="button">もう一度流す</button></figcaption></figure></section><section class="dsec" id="try"><h2>試してみる</h2><p class="web-try"><b>ブラウザー版</b> <a href="https://haru-ki417.github.io/QuantScope/" target="_blank" rel="noopener">haru-ki417.github.io/QuantScope/</a> — スマホ・タブレット・パソコンで、インストールなしで使えます。画像はブラウザーの中だけで処理し、どこにも送りません。</p><ol class="steps"><li>「見本」から、蛍光の核・染色した組織・免疫染色・形の見本を開くと、手順の例が入った状態で始まります(人工の画像なので、データがなくても試せます)。</li><li>左の列の「手順」を選ぶと、その時点の画像と、決める値・しくみが出ます。値を変えると結果がすぐ変わります。</li><li>結果は、画像・手順と値・計測の条件・分布をまとめた解析レポート(HTML)や、CSVで保存できます。</li></ol></section><section class="dsec" id="features"><h2>できること</h2><ul class="feat-list"><li><b>読み込み</b>: PNG・JPEG・TIFF(16 bitの白黒・カラーも)・BMP・GIF・DICOM(CTのHU、画素間隔を縮尺に)</li><li><b>31種類の処理</b>: 白黒・染色を分ける・自動コントラスト・CLAHE・ぼかし・背景のむらの補正・しきい値(大津・三角法・反復法)・k-means・膨張と収縮・穴埋め・くっついた粒を分ける・大きさと形で選ぶ</li><li><b>計測</b>: 粒ごとに面積・周囲長・円形度・相当直径・楕円・フェレ径・充実度・明るさ。全体の数・占有率・密度</li><li><b>陽性率</b>: ヘマトキシリン・エオシン・DABの量を粒ごとに測り、しきい値(自動は大津の方法)で陽性・陰性に分ける</li><li><b>確かめる・直す</b>: 表から粒へ移動、元の画像と左右に比べる、ゴミをクリックで数から除く(除いた数はレポートに残る)</li><li><b>一括処理とレポート</b>: フォルダーの画像に同じレシピをかけ、CSVと確認用の画像を書き出す</li></ul></section><section class="dsec" id="algo"><h2>しくみ(すべて自作)</h2><ol class="pipeline"><li><b>前処理</b>ぼかし・コントラスト</li><li><b>二値化</b>大津の方法など</li><li><b>形を整える</b>距離変換で正確な円</li><li><b>分ける</b>ウォーターシェッド</li><li><b>計測</b>輪郭・モーメント・凸包</li></ol><ul class="feat-list"><li><b>膨張・収縮</b>: ユークリッド距離変換(Felzenszwalb–Huttenlocher)で、半径が大きくても速く、形が正確な円になる</li><li><b>くっついた粒を分ける</b>: 距離変換の山を高い順に満たし、別々の山がぶつかる所に1画素の切れ目を入れる。くぼみの浅い山は「持続性」で同じ粒にまとめ、楕円が割れすぎないようにした</li><li><b>周囲長</b>: Moore近傍で輪郭をなぞり、チェーンコードに重みをかける(画素の階段をそのまま数えると、円で数%長くなる)</li><li><b>染色を分ける</b>: 吸光度は染料の量に比例して足し合わさる(Lambert–Beer)。染料の色ベクトルで作った行列の逆行列で、画素ごとに染料の量に分ける</li></ul></section><section class="dsec" id="tests"><h2>テストで確かめたこと</h2><p>73件のテストで、計算の正しさを数値で確かめています。</p><ul class="feat-list"><li>円の面積が理論値の1%以内・周囲長3%以内・円形度0.95以上。正方形のフェレ径が対角線になる</li><li>距離変換が総当たりの計算と一致し、膨張が正確な円の格子点の数になる</li><li><b>見本の蛍光の核(70個、うち6組はくっついている)を、レシピどおりに数えると70個</b></li><li>免疫染色の見本で、核の数と陽性の数が正解と合い、陽性と判定した粒はすべて本当に陽性の核の上にある</li><li>CSVは地域の設定によらず小数点が「.」で、表計算ソフトで式として実行されない。レポートのファイル名などはスクリプトとして実行されない</li></ul></section><section class="dsec" id="remake"><h2>元のアプリからの改善</h2><p>授業の課題で作った画像処理アプリ(WinForms)が出発点です。</p><ul class="feat-list"><li>処理を画像に上書きするのをやめ、レシピとして持っていつでも値を直せるようにした</li><li>「しきい値以上の画素を数える」だけだった面積を、粒ごとの計測(ラベリング・形・明るさ)と、範囲・縮尺を使った値にした</li><li>画素ごとのGetPixelをやめ、配列と並列処理に(2000×1500のカラー画像で、ほとんどの手順が0.1〜0.8秒)</li><li>ソースコードに直接書かれていたAPIキーをやめ、使う人が設定してDPAPIで暗号化して保存する形にした</li><li>同じ計算の部品をWebAssemblyにして、スマホでも使えるブラウザー版を作った</li></ul></section>
+        <nav class="case-nav" aria-label="ほかの制作物"><a class="prev" href="case-08.html"><span>前の制作物</span><b>VolumeScope</b></a><a class="next" href="index.html#projects"><span>一覧へ</span><b>制作物</b></a></nav>
       </div>
     </div>
   </div>
 </section>
 </main>
 
-<footer id="contact">
-  <div class="wrap reveal">
-    <div class="label">04 — CONTACT</div>
-    <h2>お話しできる機会を、<br>楽しみにしています。</h2>
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <h2>お話しできる機会を、楽しみにしています。</h2>
     <p class="sub">インターンや選考に関するご連絡、制作物についてのご質問など、どうぞお気軽にご連絡ください。</p>
-    <div class="contact-layout">
-      <div class="contact-cards">
-        <a class="contact-card" href="mailto:hrk417506@gmail.com">
-          <span><span class="cc-label">EMAIL</span><span class="cc-value">hrk417506@gmail.com</span></span><span class="cc-arr">→</span>
-        </a>
-        <a class="contact-card" href="https://github.com/haru-ki417" target="_blank" rel="noopener">
-          <span><span class="cc-label">GITHUB</span><span class="cc-value">haru-ki417</span></span><span class="cc-arr">↗</span>
-        </a>
-        <a class="contact-card" href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">
-          <span><span class="cc-label">ATCODER</span><span class="cc-value">haru_ki</span></span><span class="cc-arr">↗</span>
-        </a>
-        <a class="contact-card" href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">
-          <span><span class="cc-label">KAGGLE</span><span class="cc-value">haruki0417</span></span><span class="cc-arr">↗</span>
-        </a>
-      </div>
+    <div class="contact">
+      <div class="contact-links"><a class="contact-link" href="mailto:hrk417506@gmail.com"><span>Email</span><b>hrk417506@gmail.com</b></a><a class="contact-link" href="https://github.com/haru-ki417" target="_blank" rel="noopener"><span>GitHub</span><b>haru-ki417</b></a><a class="contact-link" href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener"><span>AtCoder</span><b>haru_ki</b></a><a class="contact-link" href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener"><span>Kaggle</span><b>haruki0417</b></a></div>
       <form class="contact-form" id="contact-form" data-to="hrk417506@gmail.com" data-subject="ポートフォリオ経由のご連絡">
-        <div class="field"><label for="cf-name">お名前</label><input id="cf-name" type="text" autocomplete="name" required></div>
-        <div class="field"><label for="cf-email">メールアドレス</label><input id="cf-email" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="cf-message">メッセージ</label><textarea id="cf-message" rows="5" required></textarea></div>
-        <button class="btn primary" type="submit">メールを作成する <span class="arr">→</span></button>
-        <div class="form-note">ボタンを押すと、入力内容が反映された状態でメールアプリが開きます。</div>
+        <label>お名前<input name="name" type="text" autocomplete="name" required></label>
+        <label>メールアドレス<input name="email" type="email" autocomplete="email" required></label>
+        <label>メッセージ<textarea name="message" rows="4" required></textarea></label>
+        <button class="btn primary" type="submit">メールを作成する</button>
+        <small>メールアプリが、入力した内容で開きます。</small>
       </form>
     </div>
-    <div class="copyright"><span>© 2026 Haruki Takahashi</span><span>同志社大学 生命医科学部 / 医療情報学</span></div>
+    <div class="copy"><span>© 2026 Haruki Takahashi</span><span>同志社大学 生命医科学部 医療情報学専攻</span></div>
   </div>
 </footer>
 
-<div id="totop" role="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+<dialog class="viewer" id="viewer" aria-labelledby="vw-title">
+  <div class="vw-bar">
+    <strong id="vw-title"></strong>
+    <div class="vw-device" role="group" aria-label="表示する画面">
+      <button type="button" data-device="phone">スマホ</button><button type="button" data-device="desktop">パソコン</button>
+    </div>
+    <a class="vw-open" id="vw-open" target="_blank" rel="noopener">新しいタブで開く</a>
+    <button class="vw-close" id="vw-close" type="button" aria-label="閉じる"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="vw-stage" id="vw-stage">
+    <div class="vw-frame" id="vw-frame">
+      <iframe id="vw-iframe" title="" allow="camera; microphone; fullscreen; accelerometer; gyroscope; autoplay; clipboard-write; gamepad"></iframe>
+      <div class="vw-loading" id="vw-loading"><span class="vw-trace"></span>読み込んでいます</div>
+    </div>
+  </div>
+  <p class="vw-note" id="vw-note"></p>
+</dialog>
+
 <script src="assets/main.js"></script>
 </body>
 </html>
