@@ -713,3 +713,10 @@ figure.inline-fig.phone{ max-width:260px; background:var(--bg-panel); }
 .web-try b{ display:inline-block; font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; color:var(--vital); font-weight:500; margin-right:8px; }
 .web-try a{ color:var(--vital); font-weight:600; word-break:break-all; }
 @media print{ .web-try{ background:none; } }
+
+/* 版の比較表（事例ページ） */
+.sub-h{ font-size:16px; margin:32px 0 4px; color:var(--heading); }
+.table-scroll{ overflow-x:auto; }
+.spec-table.versions td{ vertical-align:top; }
+.spec-table.versions tr:first-child td{ font-size:13px; color:var(--heading); }
+.spec-table.versions td:nth-child(2), .spec-table.versions td:nth-child(3){ width:40%; }
