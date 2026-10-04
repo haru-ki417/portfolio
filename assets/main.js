@@ -9,6 +9,28 @@
   var $$ = function (s, el) { return Array.prototype.slice.call((el || doc).querySelectorAll(s)); };
   var cssVar = function (el, name) { return getComputedStyle(el).getPropertyValue(name).trim(); };
 
+  /* ------------------------------------------------------------ ページを開いたら、いちばん上から
+     リンクから新しく開いたとき（戻る・再読み込み・#付きを除く）は、ブラウザーが前の位置を
+     持ち越しても、読み込みの終わりまで先頭に戻す。読む人が自分で動かしたら、それ以上は触らない。 */
+  (function () {
+    var nav = null;
+    try { nav = performance.getEntriesByType('navigation')[0]; } catch (e) { /* 古いブラウザー */ }
+    if (location.hash || !nav || nav.type !== 'navigate') return;
+    var moved = false;
+    var mark = function () { moved = true; };
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) { window.addEventListener(ev, mark, { passive: true, once: true }); });
+    var toTop = function () {
+      if (moved || window.scrollY === 0) return;
+      var b = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      root.style.scrollBehavior = b;
+    };
+    toTop();
+    doc.addEventListener('DOMContentLoaded', toTop, { once: true });
+    window.addEventListener('load', function () { toTop(); requestAnimationFrame(toTop); setTimeout(toTop, 120); }, { once: true });
+  })();
+
   /* ------------------------------------------------------------ テーマ */
   var themeBtn = $('#theme');
   function setTheme(t, save) {
