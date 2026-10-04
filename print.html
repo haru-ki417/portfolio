@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><title>髙橋 春喜 — Portfolio</title>
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ font-family:'Noto Sans CJK JP','Noto Sans JP',sans-serif; color:#15231E; font-size:9.2pt; line-height:1.62; }
+  .mono{ font-family:'DejaVu Sans Mono',monospace; }
+  .header{ overflow:hidden; padding-bottom:12px; border-bottom:2px solid #15231E; }
+  .header .name{ font-size:23pt; font-weight:700; letter-spacing:.02em; line-height:1.2; }
+  .header .en{ font-size:8.5pt; color:#5B6B66; margin-top:2px; font-family:'DejaVu Sans Mono',monospace; letter-spacing:.12em; }
+  .header .kicker{ font-size:8pt; color:#17946B; font-family:'DejaVu Sans Mono',monospace; margin-top:8px; letter-spacing:.06em; }
+  .contact-block{ float:right; text-align:right; font-size:8.5pt; font-family:'DejaVu Sans Mono',monospace; color:#4A5B54; padding-top:6px; line-height:1.8; }
+  .qr-block{ float:right; margin-left:16px; text-align:center; }
+  .qr-block img{ width:62px; height:62px; }
+  .qr-block div{ font-size:6.5pt; color:#5B6B66; margin-top:2px; }
+  .tagline{ margin-top:14px; font-size:12.5pt; font-weight:700; }
+  .statement{ margin-top:4px; font-size:9.4pt; color:#33443D; }
+  .now{ margin-top:8px; font-size:8.3pt; color:#4A5B54; }
+  .now b{ color:#17946B; font-family:'DejaVu Sans Mono',monospace; font-weight:400; margin-right:6px; }
+  .sec{ margin-top:14px; }
+  .sec-label{ font-family:'DejaVu Sans Mono',monospace; font-size:8pt; color:#17946B; letter-spacing:.06em; margin-bottom:6px; }
+  table.spec{ width:100%; border-collapse:collapse; table-layout:fixed; }
+  table.spec td{ width:50%; border:1px solid #D5DDD8; padding:8px 11px; vertical-align:top; }
+  table.spec .cat{ font-family:'DejaVu Sans Mono',monospace; font-size:7.5pt; color:#17946B; letter-spacing:.06em; margin-bottom:3px; }
+  table.spec ul{ list-style:none; font-size:9pt; }
+  table.spec li{ padding:1px 0; }
+  table.spec .m{ color:#6A7A73; font-size:8pt; }
+  .project{ margin-top:9px; padding-top:9px; border-top:1px solid #D5DDD8; page-break-inside:avoid; }
+  .p-kicker{ font-family:'DejaVu Sans Mono',monospace; font-size:7.8pt; color:#B06C10; letter-spacing:.04em; }
+  .p-kicker .pm{ float:right; color:#6A7A73; font-family:'Noto Sans CJK JP',sans-serif; letter-spacing:0; }
+  .project h3{ font-size:12.5pt; margin:2px 0 2px; }
+  .project .tl{ font-weight:700; font-size:9.6pt; color:#15231E; margin-bottom:3px; }
+  .project p{ font-size:8.8pt; color:#33443D; }
+  ul.feat{ list-style:none; font-size:8.5pt; margin-top:3px; }
+  ul.feat li{ padding:1px 0 1px 14px; position:relative; }
+  ul.feat li:before{ content:'—'; position:absolute; left:0; color:#17946B; }
+  .stack-row{ margin-top:5px; }
+  .stack-row span{ display:inline-block; font-family:'DejaVu Sans Mono',monospace; font-size:7.3pt; color:#17946B; border:1px solid #A9DCC8; padding:1px 7px; margin:0 5px 4px 0; border-radius:9px; }
+  .project p.mt{ font-family:'DejaVu Sans Mono',monospace; font-size:7.8pt; color:#4A5B54; margin-top:3px; }
+  .project p.mt b{ color:#17946B; font-size:9pt; }
+  .acts{ page-break-inside:avoid; margin-top:14px; }
+  table.act{ width:100%; border-collapse:collapse; font-size:9pt; }
+  table.act td{ padding:5px 0; border-top:1px solid #D5DDD8; vertical-align:top; }
+  table.act tr:last-child td{ border-bottom:1px solid #D5DDD8; }
+  table.act .k{ width:120px; font-family:'DejaVu Sans Mono',monospace; font-size:7.6pt; color:#B06C10; letter-spacing:.05em; padding-top:9px; }
+  table.act b{ font-weight:700; color:#15231E; }
+  table.act .m{ color:#5B6B66; font-size:8.5pt; }
+  .footer-note{ margin-top:10px; padding-top:6px; border-top:1px solid #D5DDD8; font-size:7.8pt; color:#6A7A73; font-family:'DejaVu Sans Mono',monospace; overflow:hidden; }
+  .fl{ float:left; } .fr{ float:right; }
+</style></head><body>
+  <div class="header">
+    <div class="contact-block"><div>hrk417506@gmail.com</div><div>github.com/haru-ki417</div><div>atcoder: haru_ki · kaggle: haruki0417</div></div>
+    <div class="qr-block"><img src="assets/qr-code.png" alt="QR"><div>Web版ポートフォリオ</div></div>
+    <div class="name">髙橋 春喜</div>
+    <div class="en">HARUKI TAKAHASHI</div>
+    <div class="kicker">MEDICAL INFORMATICS × ENGINEERING</div>
+  </div>
+  <p class="tagline">生体データと医療情報を、動くシステムに。</p>
+  <p class="statement">同志社大学 生命医科学部で医療情報学を専攻しています。センサーによる生体信号の取得から、クラウドでの安全なデータ管理、AIによる解析まで。レイヤーをまたいで、設計から実装までを自分の手で作り切ることを大切にしています。</p>
+  <p class="now"><b>INTERN</b>楽天グループ「夏の陣」(ハッカソン型短期インターンシップ)参加 ／ 基本情報技術者試験 合格 ／ Azure AZ-900・AI-900・DP-900 取得</p>
+  <div class="sec"><div class="sec-label">01 — SKILLS</div><table class="spec"><tr><td><div class="cat">LANGUAGES</div><ul><li>Python<span class="m"> — データ分析・競技プログラミング</span></li><li>C / C++<span class="m"> — Arduino・組み込み</span></li><li>C#<span class="m"> — WPF (MVVM) / MonoGame / WinForms・xUnit</span></li><li>PowerShell<span class="m"> — 構成管理・自動化</span></li></ul></td><td><div class="cat">WEB & CLOUD</div><ul><li>Microsoft Azure<span class="m"> — App Service / SQL Database / IoT Hub / Cosmos DB / Blob</span></li><li>Blazor / ASP.NET Core<span class="m"> — Webアプリを公開・運用</span></li><li>Next.js / FastAPI<span class="m"> — チーム開発でフロント・バック両方を担当</span></li><li>Bicep / GitHub Actions<span class="m"> — インフラのコード化と自動配置</span></li><li>OpenAI API<span class="m"> — マルチモーダルAIの組み込み</span></li></ul></td></tr><tr><td><div class="cat">HARDWARE & IoT</div><ul><li>Arduino / ESP32 / ESP-01S<span class="m"> — シリアル通信・WiFi・MQTTでのIoT Hub送信</span></li><li>各種センサー<span class="m"> — 脈拍・3軸加速度・温湿度・RTC・I2C</span></li></ul></td><td><div class="cat">DATA & AI</div><ul><li>PyTorch / ONNX Runtime<span class="m"> — 肺炎スクリーニングモデルの学習と組み込み</span></li><li>信号処理・画像処理<span class="m"> — Welch法・FFT、マーチングキューブス・レイキャスティング</span></li><li>numpy / scipy<span class="m"> — 生体信号処理(rPPG)</span></li><li>Kaggle<span class="m"> — 実データでの分析・モデリング</span></li><li>AtCoder<span class="m"> — アルゴリズムとデータ構造</span></li></ul></td></tr></table></div>
+  <div class="sec"><div class="sec-label">02 — PROJECTS</div><div class="project"><div class="p-kicker">CASE 01 — DESKTOP × ON-DEVICE AI × CLOUD<span class="pm">個人開発 · Windows (WPF / .NET 10) + ブラウザー版 · v1.0.0 公開</span></div>
+      <h3>MyDicomViewer</h3><p class="tl">PCの中で完結する肺炎スクリーニングAIを搭載した、DICOMビューア&クラウドPACS。</p><p class="mt">AUC <b>0.884</b> ／ Pointing Game <b>73.2%</b> ／ CPU推論 / 枚 <b>43 ms</b> ／ 単体テスト <b>43</b><br>アプリ: haru-ki417.github.io/MyDicomViewer/ ／ ダウンロード: github.com/haru-ki417/MyDicomViewer/releases ／ GitHub: github.com/haru-ki417/MyDicomViewer</p>
+      <ul class="feat"><li>Grad-CAMをONNXのグラフに組み込み、1回の推論で確率とヒートマップを同時に出力</li><li>患者単位の分割、検証データでの閾値決定、信頼区間、根拠位置の評価までをモデルカードに整理</li><li>PS3.15準拠の匿名化、キーの暗号化保存、配布物へのキー混入をビルドで検出</li></ul><div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>ONNX Runtime</span><span>PyTorch</span><span>EfficientNet-B0</span><span>fo-dicom</span><span>Azure</span><span>xUnit</span><span>GitHub Actions</span></div></div><div class="project"><div class="p-kicker">CASE 02 — HARDWARE × GAME<span class="pm">個人開発 · Windows (C# / MonoGame) + Arduino · ブラウザーでも遊べる</span></div>
+      <h3>Abbild</h3><p class="tl">心拍・振り・傾き・息で戦う。自作コントローラーで体を使って遊ぶ、100階層のダンジョンRPG。</p><p class="mt">体を使うミニゲーム <b>20</b> ／ 階層 <b>100</b> ／ テスト <b>78</b> ／ 「ふつう」のクリア率 <b>約5割</b><br>アプリ: haru-ki417.github.io/Abbild/ ／ GitHub: github.com/haru-ki417/Abbild</p>
+      <ul class="feat"><li>心拍の高ぶり・振った回数・傾き・息を1つの「体の入力」にまとめ、キーボードでは心拍を呼吸のガイドで再現</li><li>戦闘のルールは出来事のリストを返すだけにして画面と分離。自動プレイヤーに何百回も遊ばせて難しさを調整</li><li>HP0で「心停止」── 10秒以内の連打で蘇生する、CPRに着想を得たイベントを作り直し後も継承</li></ul><div class="stack-row"><span>C# / .NET 10</span><span>MonoGame</span><span>Arduino (C/C++)</span><span>シリアル通信</span><span>脈波・加速度・湿度センサー</span><span>xUnit</span><span>GitHub Actions</span></div></div><div class="project"><div class="p-kicker">CASE 03 — EMBEDDED × IoT<span class="pm">個人開発 · Arduino Uno + ESP-01S</span></div>
+      <h3>地震即時アラートシステム</h3><p class="tl">揺れを検知した瞬間、スマートフォンに通知が届く。地震アラート装置を一式自作。</p>
+      <ul class="feat"><li>ゼロ点オフセットと感度のキャリブレーションによる、揺れ量のリアルタイム算出</li><li>警戒レベルに応じて、ブザー・LED・OLED表示を切り替え</li><li>ESP-01SからTelegram Bot APIを経由して、スマートフォンへプッシュ通知</li></ul><div class="stack-row"><span>Arduino (C/C++)</span><span>ESP-01S</span><span>3軸加速度センサー</span><span>RTC</span><span>Telegram Bot API</span></div></div><div class="project"><div class="p-kicker">CASE 04 — SYSADMIN × AUTOMATION<span class="pm">個人開発 · Windows (PowerShell)</span></div>
+      <h3>Ultimate USB</h3><p class="tl">1本のUSBメモリを「PCレスキュー・開発環境・暗号化保管庫」にする、PowerShellの構成管理。</p>
+      <ul class="feat"><li>レジューム対応ダウンロード・書庫検証・更新チェックを備えた冪等セットアップ</li><li>VS Code / Git / Python / Arduino IDE を、どのPCでも同じ環境で</li><li>感染PCの自己検査、BitLocker回復キーの退避、作業記録と報告書の自動生成</li></ul><div class="stack-row"><span>PowerShell</span><span>Ventoy</span><span>PortableApps</span><span>VeraCrypt</span><span>BitLocker</span></div></div><div class="project"><div class="p-kicker">CASE 05 — TEAM HACKATHON × BIOSIGNAL<span class="pm">チーム開発 · リーダー · Web (Next.js + FastAPI) · サーバー不要のWeb版</span></div>
+      <h3>AI-SHOW（相性）</h3><p class="tl">Web面接の映像から心拍・ストレスを推定し、互いの緊張を共有して率直な対話を後押しするサービス。</p><p class="mt">アプリ: haru-ki417.github.io/Harinezumi-AI-Hack/ ／ GitHub: github.com/haru-ki417/Harinezumi-AI-Hack</p>
+      <ul class="feat"><li>顔映像からrPPG(POS法)で脈波を抽出し、心拍数・HRV・ストレスを非接触で推定</li><li>映像は保存せず、同意した数値のみを共有するプライバシー設計</li><li>AI音声面接/人対人面接の両モードと、面接後のレポート・ES照合サマリー自動生成</li><li>大会後、信号処理と面接ロジックをJavaScriptに移植し、サーバー不要でスマホからも使えるWeb版を公開(Python版と同じ入力で結果が一致することを確認)</li></ul><div class="stack-row"><span>Next.js 14</span><span>WebRTC</span><span>Web Speech API</span><span>FastAPI</span><span>numpy / scipy</span><span>rPPG</span><span>MediaPipe</span><span>PeerJS</span></div></div><div class="project"><div class="p-kicker">CASE 06 — WEB APP × IoT × CLOUD<span class="pm">個人開発 · Web (Blazor / .NET 10) · Azureで公開中</span></div>
+      <h3>Pulse & Mind Study</h3><p class="tl">勉強と体調を、ひとつのグラフで。学習時間に睡眠・気分・心拍を重ねて記録する、受験生・大学生向けのWebアプリ。</p><p class="mt">テスト <b>67</b> ／ 結論までの日数 <b>14日</b> ／ トークン保存 <b>SHA-256</b> ／ グラフ用ライブラリ <b>0</b><br>アプリ: pulsemind-datzdltheb62e.azurewebsites.net ／ GitHub: github.com/haru-ki417/PulseMindStudy</p>
+      <ul class="feat"><li>0〜24時の帯に学習と心拍を重ねる「1日のリズム」と、心拍に合わせて光が脈打つ集中モード</li><li>時刻はUTCで保存し、利用者のタイムゾーンで日を区切る(日付またぎ・夏時間もテスト)</li><li>機器トークンのハッシュ保存、マネージドIDでのDB接続、ヘルスケア取り込み時のXXE対策</li></ul><div class="stack-row"><span>C# / .NET 10</span><span>Blazor</span><span>ASP.NET Core Identity</span><span>EF Core</span><span>Azure App Service</span><span>Azure SQL</span><span>Bicep</span><span>GitHub Actions</span><span>Arduino</span></div></div><div class="project"><div class="p-kicker">CASE 07 — DESKTOP × IoT × SIGNAL PROCESSING<span class="pm">個人開発 · Windows (WPF / .NET 10) + ESP32 · スマホのセンサーで測れるWeb版</span></div>
+      <h3>TremorScope</h3><p class="tl">手のふるえを加速度センサーで測り、安静時と姿勢時を数値で比べる、医療機関向けの測定補助ソフト。</p><p class="mt">周波数の検証精度 <b>±0.08 Hz</b> ／ テスト <b>58</b> ／ 3軸の計測 <b>50 Hz</b> ／ 仮名ID <b>HMAC</b><br>アプリ: haru-ki417.github.io/TremorScope/ ／ ダウンロード: github.com/haru-ki417/TremorScope/releases ／ GitHub: github.com/haru-ki417/TremorScope</p>
+      <ul class="feat"><li>重力と姿勢の変化を除き、Welch法で3軸を合算。センサーの向きによらずピーク周波数を求める</li><li>振り切れ・通信の欠け・腕の大きな動きを測定直後に検出し、その場で取り直せる品質確認</li><li>カルテ番号はPCの外に出さず、施設ごとの鍵によるHMAC-SHA256の仮名IDと測定値だけをクラウドへ</li></ul><div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>ESP32 + MPU6050</span><span>Azure IoT Hub</span><span>Cosmos DB</span><span>SQLite (EF Core)</span><span>DICOM / PACS</span><span>xUnit</span><span>GitHub Actions</span></div></div><div class="project"><div class="p-kicker">CASE 08 — DESKTOP × 3D MEDICAL IMAGING<span class="pm">個人開発 · Windows (WPF / .NET 10) + ブラウザー版 · v1.0.0 公開</span></div>
+      <h3>VolumeScope</h3><p class="tl">CTのDICOMから3断面と3Dを並べて表示し、計測や3Dプリント用のSTL書き出しまでできるCT 3Dワークステーション。</p><p class="mt">球の体積の誤差 <b>1%以内</b> ／ テスト <b>47</b> ／ 高速化による差 <b>0画素</b> ／ レイキャスティング <b>CPU</b><br>アプリ: haru-ki417.github.io/VolumeScope/ ／ ダウンロード: github.com/haru-ki417/VolumeScope/releases ／ GitHub: github.com/haru-ki417/VolumeScope</p>
+      <ul class="feat"><li>画像の位置を断面の法線に投影して並べ、ガントリー傾斜や斜めの撮影でもゆがまずに3D化</li><li>マーチングキューブス法で頂点を共有した閉じた面を作り、破片除去とTaubin法の平滑化を経てSTL / OBJへ</li><li>空の領域を飛ばす高速化をしても、飛ばさない場合と1画素も違わないことをテストで保証</li></ul><div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>fo-dicom</span><span>MPR</span><span>Marching Cubes</span><span>Ray casting</span><span>STL / OBJ</span><span>xUnit</span><span>GitHub Actions</span></div></div><div class="project"><div class="p-kicker">CASE 09 — IMAGE ANALYSIS × WEB<span class="pm">個人開発 · Windows (WPF / .NET 10) + ブラウザー版 · 研究・学習用</span></div>
+      <h3>QuantScope</h3><p class="tl">顕微鏡の画像から、細胞の核や粒子を数えて測る。手順を「レシピ」として積み重ねる画像解析アプリ。</p><p class="mt">処理の種類 <b>31</b> ／ 見本の核を正しく数える <b>70 / 70</b> ／ テスト <b>73</b> ／ 外部の画像処理ライブラリ <b>0</b><br>アプリ: haru-ki417.github.io/QuantScope/ ／ GitHub: github.com/haru-ki417/QuantScope</p>
+      <ul class="feat"><li>距離変換によるウォーターシェッドで、くっついた核を1画素の切れ目で分ける(浅いくぼみは持続性でまとめる)</li><li>Lambert–Beerの法則にもとづく染色の分離と、粒ごとの値の分布に大津の方法をかけた陽性しきい値</li><li>手順はレシピとして保存して一括処理に使え、条件と結果を1つのHTMLレポートに残せる</li></ul><div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>Blazor WebAssembly</span><span>画像処理(自作)</span><span>カラーデコンボリューション</span><span>xUnit</span><span>GitHub Actions</span></div></div></div>
+  <div class="sec acts"><div class="sec-label">03 — ACTIVITIES</div><table class="act"><tr><td class="k">INTERNSHIP</td><td><b>楽天グループ「夏の陣」</b><br><span class="m">ハッカソン型の短期インターンシップに参加</span></td></tr><tr><td class="k">HACKATHON</td><td><b>チーム「Life &amp; Medical Hackers」リーダー</b><br><span class="m">rPPGを用いた面接支援サービス AI-SHOW(相性)を開発</span></td></tr><tr><td class="k">CERTIFICATION</td><td><b>基本情報技術者試験 合格</b><br><span class="m">Microsoft Azure AZ-900 / AI-900 / DP-900 取得</span></td></tr><tr><td class="k">PROFILES</td><td><b>AtCoder: haru_ki ／ Kaggle: haruki0417 ／ GitHub: haru-ki417</b><br><span class="m">競技プログラミングとデータ分析を継続的に学習中</span></td></tr></table></div>
+  <div class="footer-note"><span class="fl">© 2026 Haruki Takahashi</span><span class="fr">同志社大学 生命医科学部 / 医療情報学</span></div>
+</body></html>

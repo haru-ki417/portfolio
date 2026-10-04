@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VolumeScope | 髙橋 春喜</title>
+<meta name="description" content="CTのDICOMシリーズを読み込み、3断面(横断・冠状断・矢状断)と3Dを並べて表示するWindowsアプリ。骨・皮膚・造影血管・肺の立体表示、距離とCT値の計測、3Dプリント用のSTL書き出しまでできる、読影や手術計画の補助を想定したCT 3Dワークステーションです。">
+<meta name="theme-color" content="#0A1210">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VolumeScope | 髙橋 春喜">
+<meta property="og:description" content="CTのDICOMシリーズを読み込み、3断面(横断・冠状断・矢状断)と3Dを並べて表示するWindowsアプリ。骨・皮膚・造影血管・肺の立体表示、距離とCT値の計測、3Dプリント用のSTL書き出しまでできる、読影や手術計画の補助を想定したCT 3Dワークステーションです。">
+<meta property="og:image" content="https://haru-ki417.github.io/portfolio/assets/og-image.png">
+<meta property="og:url" content="https://haru-ki417.github.io/portfolio/case-08.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}#preloader{display:none!important}.diagram .dbox,.diagram .dpath{stroke-dashoffset:0!important}.diagram text{opacity:1!important}</style></noscript>
+</head>
+<body>
+
+<div id="preloader"><svg viewBox="0 0 200 56"><path class="pl-line" d="M0,28 L60,28 L72,28 L82,8 L94,48 L104,14 L116,28 L136,28 L200,28"/></svg></div>
+<div id="scrollbar"></div>
+<div id="cursor-glow"></div>
+
+<header class="topnav">
+  <div class="wrap">
+    <div class="brand"><a href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" stroke-width="2"/><path d="M8,33 L20,33 L24,33 L27,20 L31,46 L35,15 L38,33 L56,33" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Haruki Takahashi</span></a></div>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#achievements">Activities</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="nav-tools">
+        <a class="lang-link" href="en.html#p-volume" hreflang="en">EN</a>
+        <button class="icon-btn" id="theme-toggle" aria-label="テーマ切り替え" type="button"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg></button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="メニュー" aria-controls="mobile-menu" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="wrap">
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#achievements">Activities</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="detail-hero">
+  <div class="hero-grid"></div>
+  <div class="wrap reveal">
+    <a class="back-link" href="index.html#p-volume">← 制作物一覧に戻る</a>
+    <div class="p-kicker">CASE 08 — DESKTOP × 3D MEDICAL IMAGING</div>
+    <h1>VolumeScope</h1>
+    <p class="lede">CTのDICOMシリーズを読み込み、3断面(横断・冠状断・矢状断)と3Dを並べて表示するWindowsアプリ。骨・皮膚・造影血管・肺の立体表示、距離とCT値の計測、3Dプリント用のSTL書き出しまでできる、読影や手術計画の補助を想定したCT 3Dワークステーションです。</p>
+    <dl class="detail-meta"><div><dt>TYPE</dt><dd>個人開発</dd></div><div><dt>ROLE</dt><dd>設計・実装・画像処理アルゴリズム</dd></div><div><dt>PLATFORM</dt><dd>Windows (WPF / .NET 10) ・ ブラウザー</dd></div><div><dt>LINKS</dt><dd><a href="https://haru-ki417.github.io/VolumeScope/" target="_blank" rel="noopener">ブラウザーで開く ↗</a><br><a href="https://github.com/haru-ki417/VolumeScope/releases/latest" target="_blank" rel="noopener">Windows版をダウンロード ↗</a><br><a href="https://github.com/haru-ki417/VolumeScope" target="_blank" rel="noopener">GitHub ↗</a></dd></div></dl>
+  </div>
+</section>
+
+<section class="detail-body">
+  <div class="wrap">
+    <div class="reveal"><div class="detail-gallery"><figure class="detail-visual"><a href="assets/vs-main.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/vs-main.jpg" width="1400" height="851" alt="VolumeScopeの4分割画面"></a><figcaption>4分割の画面 — 3断面の十字が連動し、右下に骨のボリュームレンダリング</figcaption></figure></div><div class="detail-gallery two"><figure class="detail-visual"><a href="assets/vs-vessels.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/vs-vessels.jpg" width="1400" height="851" alt="造影血管を表示した画面" loading="lazy"></a><figcaption>造影血管のボリュームレンダリング</figcaption></figure><figure class="detail-visual"><a href="assets/vs-cropped.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/vs-cropped.jpg" width="1400" height="851" alt="体表を切り取った3D表示" loading="lazy"></a><figcaption>体表を前後で切り取り、肺の結節を見る</figcaption></figure></div><p class="gallery-note">画面はすべて、アプリに入っている人工の胸部CT(見本の模型)です。実際の患者の画像ではありません。</p></div>
+    <div class="detail-cols">
+      <nav class="toc" aria-label="目次"><div class="toc-label">CONTENTS</div><ol><li><a href="#overview">概要</a></li><li><a href="#try">試してみる</a></li><li><a href="#features">できること</a></li><li><a href="#volume">正しく3Dにする</a></li><li><a href="#surface">穴のない面を作る(マーチングキューブス法)</a></li><li><a href="#render">GPUなしで動くボリュームレンダリング</a></li><li><a href="#tests">テストで確かめたこと</a></li><li><a href="#design">デザイン</a></li><li><a href="#next">制限と今後</a></li></ol></nav>
+      <div>
+        <section class="dsec reveal" id="overview"><span class="sec-num">01</span><h2>概要</h2><p>CTは数百枚の断面画像の集まりです。VolumeScopeは、それらを患者の体の中の位置に合わせて正しく積み上げて3Dにし、3方向の断面と立体を同時に見せます。十字の位置は3つの断面で連動し、3Dでは組織ごとの見え方や切り取りで体の中を確かめられます。</p><table class="spec-table"><tr><td>プラットフォーム</td><td>Windows デスクトップ(WPF / .NET 10)</td></tr><tr><td>開発形態</td><td>個人開発</td></tr><tr><td>主な技術</td><td>C#, MVVM, fo-dicom(圧縮DICOMの展開を含む), マーチングキューブス法, CPUレイキャスティング, xUnit, GitHub Actions</td></tr><tr><td>ライセンス</td><td>MIT License</td></tr></table><div class="callout"><b>NOTE</b>診断用の医療機器ではありません。医療機器としての承認・認証は受けておらず、研究・説明・計画の補助を想定しています。</div></section><section class="dsec reveal" id="try"><span class="sec-num">02</span><h2>試してみる</h2><p class="web-try"><b>ブラウザー版</b> <a href="https://haru-ki417.github.io/VolumeScope/" target="_blank" rel="noopener">haru-ki417.github.io/VolumeScope/</a> — フォルダー・ZIPを選ぶかドロップするだけ。3DはWebGL2のシェーダーで、Windows版と同じカメラ・伝達関数・陰影の式で描きます。断面・面・計測はWindows版と同じC#をWebAssemblyに事前翻訳(AOT)して動かしています。</p><ol class="steps"><li><a href="https://github.com/haru-ki417/VolumeScope/releases/latest" target="_blank" rel="noopener">最新のリリース</a>から <code>VolumeScope-1.0.0-win-x64.zip</code> をダウンロードして展開します(.NETのインストールは不要です)。</li><li><code>VolumeScope.exe</code> を起動します。署名をしていないため警告が出た場合は「詳細情報」→「実行」を選びます。</li><li>「見本の模型」を押すと、人工の胸部CT(背骨・肋骨・造影大動脈・肺・直径12mmの結節)で一通りの操作を試せます。</li></ol><p class="small-note">実際のCTで試す場合は、The Cancer Imaging Archive(TCIA)などの公開データが使えます。コレクションごとに利用条件が違うため、各ページで確認してください。</p></section><section class="dsec reveal" id="features"><span class="sec-num">03</span><h2>できること</h2><ul class="feat-list"><li><b>読み込み</b>: フォルダーを選ぶかドロップ。シリーズを自動で見分け、位置決め画像と重複を除外。圧縮DICOM(JPEG・JPEG 2000など)も展開</li><li><b>3断面(MPR)</b>: 患者座標で切り出し、十字の位置が3画面で連動。濃淡のプリセットと、厚みのあるMIP / 平均</li><li><b>3D</b>: 骨・皮膚・造影血管・肺のボリュームレンダリング、閾値の面、MIP。前後・左右・上下の切り取り</li><li><b>組織と閾値</b>: CT値の分布(ヒストグラム)を見ながら、線をドラッグして閾値を合わせる</li><li><b>計測</b>: 2点間の距離(mm)、円の中のCT値(平均・SD・最小・最大・面積)</li><li><b>書き出し</b>: 面をSTL / OBJ(mm単位)、画面をPNG</li></ul></section><section class="dsec reveal" id="volume"><span class="sec-num">04</span><h2>正しく3Dにする</h2><ol class="pipeline"><li><b>シリーズ検出</b>位置決め・重複を除外</li><li><b>並べ替え</b>位置を法線に投影</li><li><b>3D化</b>番地⇔患者座標のアフィン変換</li><li><b>MPR</b>三線形補間で切り出し</li><li><b>3D表示</b>面・ボリューム・MIP</li></ol><p>各画像の位置(Image Position)を断面の法線方向に投影して並べるため、ファイル名や画像番号の順番に頼りません。スライスの向きと間隔も位置から求めるので、ガントリー傾斜のある撮影でもゆがまず、頭側・足側どちら向きの撮影にも対応します。符号つき12bitの画像や、Rescale Interceptを持つ形式も扱えます。</p></section><section class="dsec reveal" id="surface"><span class="sec-num">05</span><h2>穴のない面を作る(マーチングキューブス法)</h2><p>閾値の境目の面は、マーチングキューブス法で作ります。辺の上の位置を補間し、隣り合う立方体で頂点を共有して、穴のない面にしています。画像の端でも面を閉じるので、体積を求められます。計算はスライス方向に分けて並列に行い、継ぎ目の頂点をつなぎます。最後に小さな破片を除き、Taubinの方法でなめらかにします(体積がほとんど縮まない)。</p><div class="callout"><b>BUG FIX FROM THE PROTOTYPE</b>元の試作では、辺の表(EdgeTable)が標準の表と食い違っていて、三角形の頂点の一部が前の立方体の古い位置で作られていました。VolumeScopeでは辺の表を三角形の表から作ることで、食い違いが起きない仕組みにしました。閾値の固定(200HU)、4ボクセルおきの間引き、スライス間隔と二重にかかっていた縦方向の倍率もなくしています。</div></section><section class="dsec reveal" id="render"><span class="sec-num">06</span><h2>GPUなしで動くボリュームレンダリング</h2><p>ボリュームレンダリングはCPUのレイキャスティングで実装し、GPUのないPCや仮想環境でも動くようにしました。伝達関数で組織ごとの色と透明度を決め、勾配から陰影をつけます。不透明になった時点で計算を打ち切り、8³ボクセルの塊ごとの最大値を使って空の領域を飛ばします。操作中は粗く、止めると細かく描き直すことで、操作の軽さと画質を両立しています。</p></section><section class="dsec reveal" id="tests"><span class="sec-num">07</span><h2>テストで確かめたこと</h2><p>47件のテストで、計算の正しさを数値で確かめています。</p><ul class="feat-list"><li>読み込み: ばらばらの順番、逆向きの撮影、位置決め画像と重複、斜め+ガントリー傾斜、符号つき12bit、位置情報のない古い形式</li><li>面: 球の体積が理論値の1%以内、表面積が2%以内、オイラー標数が2。雑音だらけの画像でも、すべての辺がちょうど2つの三角形に共有される(穴がない)</li><li>描画: 空の領域を飛ばしても、飛ばさない場合と1画素も違わない。正面から見て患者の右が画面の左になる向きの慣例</li><li>断面・計測・STL / OBJの形式</li></ul><p>計算部分は画面に依存しないライブラリに分け、LinuxのCIでもテストしています。</p></section><section class="dsec reveal" id="design"><span class="sec-num">08</span><h2>デザイン</h2><p>断面ごとに色を決めています(横断は琥珀、冠状断は青緑、矢状断はばら色)。ほかの画面に引かれた十字の線も同じ色なので、どの線がどの断面かがすぐに分かります。</p><figure class="detail-visual"><img src="assets/vs-mip.jpg" width="1400" height="851" alt="厚み20mmのMIPと3DのMIP" loading="lazy"><figcaption>厚み20mmのMIPと、3DのMIP</figcaption></figure></section><section class="dsec reveal" id="next"><span class="sec-num">09</span><h2>制限と今後</h2><p>マルチフレーム(Enhanced CT)形式には未対応です(スライスごとのファイルなら読めます)。三角形が多い場合(約150万以上)は自動で粗くして表示し、書き出しでは元の細かさを選べます。計測の値は画像のPixel Spacingと位置の情報に基づくため、情報が欠けている画像では注意を表示します。</p><p>今後は、任意の向きの斜め断面、シードからの領域拡張による領域の切り出し、DICOMへの書き出しに取り組む予定です。</p></section>
+        <nav class="case-nav reveal" aria-label="制作物ナビゲーション"><a class="prev" href="case-07.html"><span class="cn-dir">← PREVIOUS</span><span class="cn-title">TremorScope</span></a><a class="next" href="case-09.html"><span class="cn-dir">NEXT →</span><span class="cn-title">QuantScope</span></a></nav>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap reveal">
+    <div class="label">04 — CONTACT</div>
+    <h2>お話しできる機会を、<br>楽しみにしています。</h2>
+    <p class="sub">インターンや選考に関するご連絡、制作物についてのご質問など、どうぞお気軽にご連絡ください。</p>
+    <div class="contact-layout">
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:hrk417506@gmail.com">
+          <span><span class="cc-label">EMAIL</span><span class="cc-value">hrk417506@gmail.com</span></span><span class="cc-arr">→</span>
+        </a>
+        <a class="contact-card" href="https://github.com/haru-ki417" target="_blank" rel="noopener">
+          <span><span class="cc-label">GITHUB</span><span class="cc-value">haru-ki417</span></span><span class="cc-arr">↗</span>
+        </a>
+        <a class="contact-card" href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">
+          <span><span class="cc-label">ATCODER</span><span class="cc-value">haru_ki</span></span><span class="cc-arr">↗</span>
+        </a>
+        <a class="contact-card" href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">
+          <span><span class="cc-label">KAGGLE</span><span class="cc-value">haruki0417</span></span><span class="cc-arr">↗</span>
+        </a>
+      </div>
+      <form class="contact-form" id="contact-form" data-to="hrk417506@gmail.com" data-subject="ポートフォリオ経由のご連絡">
+        <div class="field"><label for="cf-name">お名前</label><input id="cf-name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="cf-email">メールアドレス</label><input id="cf-email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="cf-message">メッセージ</label><textarea id="cf-message" rows="5" required></textarea></div>
+        <button class="btn primary" type="submit">メールを作成する <span class="arr">→</span></button>
+        <div class="form-note">ボタンを押すと、入力内容が反映された状態でメールアプリが開きます。</div>
+      </form>
+    </div>
+    <div class="copyright"><span>© 2026 Haruki Takahashi</span><span>同志社大学 生命医科学部 / 医療情報学</span></div>
+  </div>
+</footer>
+
+<div id="totop" role="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+<script src="assets/main.js"></script>
+</body>
+</html>

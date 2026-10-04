@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse &amp; Mind Study | 髙橋 春喜</title>
+<meta name="description" content="勉強と体調を、ひとつのグラフで。受験生・大学生のための学習記録Webアプリです。学習時間に睡眠・気分・心拍をいっしょに記録し、「よく眠れた日は集中できているか」を自分のデータで確かめられます。">
+<meta name="theme-color" content="#0A1210">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pulse &amp; Mind Study | 髙橋 春喜">
+<meta property="og:description" content="勉強と体調を、ひとつのグラフで。受験生・大学生のための学習記録Webアプリです。学習時間に睡眠・気分・心拍をいっしょに記録し、「よく眠れた日は集中できているか」を自分のデータで確かめられます。">
+<meta property="og:image" content="https://haru-ki417.github.io/portfolio/assets/og-image.png">
+<meta property="og:url" content="https://haru-ki417.github.io/portfolio/case-06.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}#preloader{display:none!important}.diagram .dbox,.diagram .dpath{stroke-dashoffset:0!important}.diagram text{opacity:1!important}</style></noscript>
+</head>
+<body>
+
+<div id="preloader"><svg viewBox="0 0 200 56"><path class="pl-line" d="M0,28 L60,28 L72,28 L82,8 L94,48 L104,14 L116,28 L136,28 L200,28"/></svg></div>
+<div id="scrollbar"></div>
+<div id="cursor-glow"></div>
+
+<header class="topnav">
+  <div class="wrap">
+    <div class="brand"><a href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" stroke-width="2"/><path d="M8,33 L20,33 L24,33 L27,20 L31,46 L35,15 L38,33 L56,33" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Haruki Takahashi</span></a></div>
+    <nav>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#achievements">Activities</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="nav-tools">
+        <a class="lang-link" href="en.html#p-pulsemind" hreflang="en">EN</a>
+        <button class="icon-btn" id="theme-toggle" aria-label="テーマ切り替え" type="button"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg></button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="メニュー" aria-controls="mobile-menu" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="wrap">
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#achievements">Activities</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="detail-hero">
+  <div class="hero-grid"></div>
+  <div class="wrap reveal">
+    <a class="back-link" href="index.html#p-pulsemind">← 制作物一覧に戻る</a>
+    <div class="p-kicker">CASE 06 — WEB APP × IoT × CLOUD</div>
+    <h1>Pulse &amp; Mind Study</h1>
+    <p class="lede">勉強と体調を、ひとつのグラフで。受験生・大学生のための学習記録Webアプリです。学習時間に睡眠・気分・心拍をいっしょに記録し、「よく眠れた日は集中できているか」を自分のデータで確かめられます。</p>
+    <dl class="detail-meta"><div><dt>TYPE</dt><dd>個人開発</dd></div><div><dt>ROLE</dt><dd>企画・設計・実装・デザイン・運用</dd></div><div><dt>PLATFORM</dt><dd>Web (Blazor / .NET 10) · Azure</dd></div><div><dt>LINKS</dt><dd><a href="https://pulsemind-datzdltheb62e.azurewebsites.net" target="_blank" rel="noopener">アプリを開く ↗</a><br><a href="https://github.com/haru-ki417/PulseMindStudy" target="_blank" rel="noopener">GitHub ↗</a></dd></div></dl>
+  </div>
+</section>
+
+<section class="detail-body">
+  <div class="wrap">
+    <div class="reveal"><div class="detail-gallery"><figure class="detail-visual"><a href="assets/pms-home.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/pms-home.jpg" width="1400" height="972" alt="Pulse & Mind Studyのホーム画面"></a><figcaption>ホーム — 今日の学習時間、1日のリズム(学習と心拍)、試験までの残り日数、直近7日</figcaption></figure></div><div class="detail-gallery two"><figure class="detail-visual"><a href="assets/pms-focus.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/pms-focus.jpg" width="1400" height="875" alt="集中モードの画面。タイマーと心拍に合わせて光る円" loading="lazy"></a><figcaption>集中モード — 中央の光が心拍に合わせて脈打つ</figcaption></figure><figure class="detail-visual"><a href="assets/pms-insights.jpg" target="_blank" rel="noopener" title="拡大表示"><img src="assets/pms-insights.jpg" width="1400" height="972" alt="分析画面。睡眠と学習時間、睡眠と集中度の散布図" loading="lazy"></a><figcaption>分析 — 順位相関と95%信頼区間。はっきりしないときはそう表示する</figcaption></figure></div><p class="gallery-note">画面の記録はすべて乱数で作った見本データです。</p></div>
+    <div class="detail-cols">
+      <nav class="toc" aria-label="目次"><div class="toc-label">CONTENTS</div><ol><li><a href="#overview">概要</a></li><li><a href="#features">できること</a></li><li><a href="#insights">分析は「言いすぎない」</a></li><li><a href="#time">時刻と日付を正しく扱う</a></li><li><a href="#privacy">健康データを預かる責任</a></li><li><a href="#iot">心拍センサーとヘルスケアの取り込み</a></li><li><a href="#ops">テスト・公開・運用</a></li><li><a href="#design">デザイン</a></li></ol></nav>
+      <div>
+        <section class="dsec reveal" id="overview"><span class="sec-num">01</span><h2>概要</h2><p>勉強の記録アプリは多くありますが、睡眠や心拍といった体調のデータと同じ画面で見られるものは多くありません。Pulse &amp; Mind Studyは、学習時間に睡眠・気分・歩数・心拍を重ね、自分のリズムを確かめるためのWebアプリです。</p><p>心拍はArduinoで自作した脈拍センサーか、iPhone / Apple Watchの「ヘルスケア」の書き出しから取り込めます。Azure上で公開しており、だれでも登録して使えます。</p><table class="spec-table"><tr><td>プラットフォーム</td><td>Web(Blazor Web App / .NET 10)。スマートフォンではホーム画面に追加して使える</td></tr><tr><td>公開先</td><td>Azure App Service + Azure SQL Database</td></tr><tr><td>開発形態</td><td>個人開発</td></tr><tr><td>主な技術</td><td>C#, Blazor, ASP.NET Core Identity(2段階認証・パスキー), Entity Framework Core, Azure, Bicep, GitHub Actions, xUnit v3, Arduino</td></tr><tr><td>ライセンス</td><td>MIT License</td></tr></table><div class="callout"><b>NOTE</b>医療機器ではなく、病気の診断・治療・予防を目的としたものではありません。</div></section><section class="dsec reveal" id="features"><span class="sec-num">02</span><h2>できること</h2><ul class="feat-list"><li><b>1日のリズム</b>: 0〜24時の帯に、勉強した時間(科目の色)と心拍の線を重ねて表示</li><li><b>集中モード</b>: 全画面の静かな画面で、中央の光が心拍に合わせて脈打つ(センサーが無いときは1分に6回の呼吸のペース)</li><li><b>学習タイマー</b>: 科目を選んで開始・終了。集中度(1〜5)とメモを残せ、止め忘れは12時間で区切る</li><li><b>試験カウントダウン</b>: 目指す試験までの残り日数と「今のペースなら試験までにあと何時間」</li><li><b>1年分のカレンダーと週の振り返りカード</b>: 振り返りカードは端末の中で画像にして保存・共有</li><li><b>データの持ち出し・削除</b>: 全データをCSVで書き出し、アカウント削除で全記録を削除</li></ul></section><section class="dsec reveal" id="insights"><span class="sec-num">03</span><h2>分析は「言いすぎない」</h2><p>元の試作では、5行のダミーデータで学習させた機械学習モデルが「おすすめの学習時間」を出していました。もっともらしい数字は出ますが、根拠がありません。作り直しでは、分析の出し方そのものを見直しました。</p><ul class="feat-list"><li>14日分そろうまでは結論を出さず、「あと何日で分析できるか」を表示する</li><li>値そのものではなく順位で比べる(スピアマンのρ)。5段階の気分や、極端に長く勉強した日があってもぶれにくい</li><li>95%信頼区間が0をまたぐときは「はっきりした傾向は見られない」と表示する</li><li>相関と因果を区別する説明を、結果のすぐ横に置く</li></ul><div class="callout"><b>DESIGN POINT</b>「よく眠った日に長く勉強しているのは、休日だからかもしれない」。数字を出すことより、その数字から言えないことを伝えることを優先しました。</div></section><section class="dsec reveal" id="time"><span class="sec-num">04</span><h2>時刻と日付を正しく扱う</h2><p>時刻はすべてUTCで保存し、「何日に何分勉強したか」は利用者のタイムゾーンで区切ります。たとえば日本時間23:30〜0:45の勉強は、2日に分けて30分と45分として数えます。夏時間のある地域もテストで確かめました。</p><p>心拍は1秒に何度も届くため、1分ごとの平均・最小・最大・件数だけを保存します。件数を持っておくことで、あとから同じ1分の値が届いても平均を正しく更新できます。</p></section><section class="dsec reveal" id="privacy"><span class="sec-num">05</span><h2>健康データを預かる責任</h2><ul class="feat-list"><li>機器トークンはSHA-256のハッシュだけを保存し、平文は登録時に一度だけ表示</li><li>アプリからデータベースへはマネージドIDで接続し、パスワードをどこにも置かない</li><li>ログイン・登録の送信回数制限、5回失敗で15分ロック、CSPなどの安全ヘッダー</li><li>ヘルスケアの取り込みでは必要な3種類だけを保存し、ファイルはすぐ削除(XMLの外部参照も無効化)</li><li>セキュリティの記録のIPアドレスは末尾を伏せて保存し、180日で自動削除</li><li>書き出すCSVは、表計算ソフトで数式として実行されないよう処理</li><li>氏名・電話番号など、機能に不要な個人情報は預からない</li></ul></section><section class="dsec reveal" id="iot"><span class="sec-num">06</span><h2>心拍センサーとヘルスケアの取り込み</h2><p>Arduinoの脈拍センサーが出す「BPM:72」のような行を、PCで動く常駐プログラムIoTBridgeが読み取り、機器トークン付きのHTTPSでまとめて送ります。接続が切れても再接続・送り直しを行い、センサーが無くても見本の心拍で試せる見本モードもあります。</p><figure class="detail-visual diagram-visual"><div class="diagram"><svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img"><defs><marker id="arrd6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6F857C"/></marker></defs><rect class="dnode dbox" x="10" y="20" width="125" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="72.5" y="44.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">Arduino</text><text x="72.5" y="60.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">脈拍センサー</text><rect class="dnode dbox" x="10" y="120" width="125" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="72.5" y="144.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">IoTBridge</text><text x="72.5" y="160.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">PCの常駐プログラム</text><rect class="dnode dbox" x="10" y="226" width="125" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="72.5" y="250.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">iPhone</text><text x="72.5" y="266.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">ヘルスケアの書き出し</text><rect class="dnode dbox" x="167" y="100" width="135" height="94" rx="7" fill="rgba(255,255,255,0.015)" stroke="#E8A33D" stroke-width="1.3"/><text x="234.5" y="144.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">Azure App Service</text><text x="234.5" y="160.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">Blazor · .NET 10</text><rect class="dnode dbox" x="330" y="20" width="120" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="390.0" y="44.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">ブラウザ / スマホ</text><text x="390.0" y="60.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">ホーム画面に追加</text><rect class="dnode dbox" x="330" y="120" width="120" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="390.0" y="144.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">Azure SQL</text><text x="390.0" y="160.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">マネージドIDで接続</text><rect class="dnode dbox" x="330" y="226" width="120" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="390.0" y="250.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">GitHub Actions</text><text x="390.0" y="266.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">Bicep · OIDCで配置</text><path class="dpath" d="M72,74 L72,117" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arrd6)"/><path class="dpath" d="M135,147 L164,147" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arrd6)"/><path class="dpath" d="M135,253 L150,253 L150,175 L164,175" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arrd6)"/><path class="dpath" d="M390,74 L390,86 L234,86 L234,97" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arrd6)"/><path class="dpath" d="M302,147 L327,147" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arrd6)"/><path class="dpath" d="M390,226 L390,212 L234,212 L234,197" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arrd6)"/></svg></div><figcaption>構成 — センサー・ヘルスケア・ブラウザからAzureへ</figcaption></figure><p>受け取る側のAPIは、1回2,000件・本文512KBまで、送信元ごとに1分120回までに制限し、30〜220bpmの範囲外や未来の時刻は捨てて件数を返します。iPhoneのヘルスケアの書き出しは、何度取り込んでも重複しないように取り込みます。</p></section><section class="dsec reveal" id="ops"><span class="sec-num">07</span><h2>テスト・公開・運用</h2><ul class="feat-list"><li>xUnit v3で67件のテスト。処理単体に加え、アプリ全体を起動してAPIの認証や安全ヘッダー、他人のデータが書き出しに混ざらないことまで確認</li><li>GitHub Actionsでプッシュのたびにビルドとテスト</li><li>AzureのApp ServiceとSQL DatabaseをBicepで構成し、GitHub ActionsからOIDCで配置(キーを保存しない)</li><li>Azureの無料プランでも動くよう構成し、実際に公開して運用</li></ul></section><section class="dsec reveal" id="design"><span class="sec-num">08</span><h2>デザイン</h2><p>Appleの製品のような落ち着いた上質さを土台にしつつ、同じ形のカードを並べず、ウィジェットの大きさに強弱をつけました。印象に残る場面は「1日のリズム」と「集中モードの脈打つ光」の2つだけに絞り、ほかは静かにしています。</p><p>色は役割ごとに固定し(学習は藍、心拍は紅、睡眠は菫、気分は山吹、歩数は青緑)、ライトとダークの両方に対応しました。グラフ・振り返りカード・アイコンは外部ライブラリを使わず、HTML / CSS / SVGで自作しています。</p><figure class="detail-visual inline-fig phone"><img src="assets/pms-mobile.jpg" width="520" height="1125" alt="スマートフォンでのホーム画面" loading="lazy"><figcaption>スマートフォンでの表示</figcaption></figure></section>
+        <nav class="case-nav reveal" aria-label="制作物ナビゲーション"><a class="prev" href="case-05.html"><span class="cn-dir">← PREVIOUS</span><span class="cn-title">AI-SHOW（相性）</span></a><a class="next" href="case-07.html"><span class="cn-dir">NEXT →</span><span class="cn-title">TremorScope</span></a></nav>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap reveal">
+    <div class="label">04 — CONTACT</div>
+    <h2>お話しできる機会を、<br>楽しみにしています。</h2>
+    <p class="sub">インターンや選考に関するご連絡、制作物についてのご質問など、どうぞお気軽にご連絡ください。</p>
+    <div class="contact-layout">
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:hrk417506@gmail.com">
+          <span><span class="cc-label">EMAIL</span><span class="cc-value">hrk417506@gmail.com</span></span><span class="cc-arr">→</span>
+        </a>
+        <a class="contact-card" href="https://github.com/haru-ki417" target="_blank" rel="noopener">
+          <span><span class="cc-label">GITHUB</span><span class="cc-value">haru-ki417</span></span><span class="cc-arr">↗</span>
+        </a>
+        <a class="contact-card" href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">
+          <span><span class="cc-label">ATCODER</span><span class="cc-value">haru_ki</span></span><span class="cc-arr">↗</span>
+        </a>
+        <a class="contact-card" href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">
+          <span><span class="cc-label">KAGGLE</span><span class="cc-value">haruki0417</span></span><span class="cc-arr">↗</span>
+        </a>
+      </div>
+      <form class="contact-form" id="contact-form" data-to="hrk417506@gmail.com" data-subject="ポートフォリオ経由のご連絡">
+        <div class="field"><label for="cf-name">お名前</label><input id="cf-name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="cf-email">メールアドレス</label><input id="cf-email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="cf-message">メッセージ</label><textarea id="cf-message" rows="5" required></textarea></div>
+        <button class="btn primary" type="submit">メールを作成する <span class="arr">→</span></button>
+        <div class="form-note">ボタンを押すと、入力内容が反映された状態でメールアプリが開きます。</div>
+      </form>
+    </div>
+    <div class="copyright"><span>© 2026 Haruki Takahashi</span><span>同志社大学 生命医科学部 / 医療情報学</span></div>
+  </div>
+</footer>
+
+<div id="totop" role="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+<script src="assets/main.js"></script>
+</body>
+</html>

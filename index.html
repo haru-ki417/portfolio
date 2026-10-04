@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>髙橋 春喜 ポートフォリオ</title>
+<meta name="description" content="同志社大学 生命医科学部で医療情報学を専攻する髙橋春喜のポートフォリオ。AI搭載DICOMビューア、心拍や体の動きで遊ぶRPG、地震アラート装置、USB構成管理、rPPGによる非接触バイタル推定、学習と体調の記録Webアプリ、振戦の測定補助ソフト、CT 3Dワークステーション、顕微鏡画像の解析アプリの9つの制作物を掲載。多くはブラウザーからそのまま試せます。">
+<meta name="theme-color" content="#0A1210">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="髙橋 春喜 ポートフォリオ">
+<meta property="og:description" content="同志社大学 生命医科学部で医療情報学を専攻する髙橋春喜のポートフォリオ。AI搭載DICOMビューア、心拍や体の動きで遊ぶRPG、地震アラート装置、USB構成管理、rPPGによる非接触バイタル推定、学習と体調の記録Webアプリ、振戦の測定補助ソフト、CT 3Dワークステーション、顕微鏡画像の解析アプリの9つの制作物を掲載。多くはブラウザーからそのまま試せます。">
+<meta property="og:image" content="https://haru-ki417.github.io/portfolio/assets/og-image.png">
+<meta property="og:url" content="https://haru-ki417.github.io/portfolio/index.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}#preloader{display:none!important}.diagram .dbox,.diagram .dpath{stroke-dashoffset:0!important}.diagram text{opacity:1!important}</style></noscript>
+</head>
+<body>
+
+<div id="preloader"><svg viewBox="0 0 200 56"><path class="pl-line" d="M0,28 L60,28 L72,28 L82,8 L94,48 L104,14 L116,28 L136,28 L200,28"/></svg></div>
+<div id="scrollbar"></div>
+<div id="cursor-glow"></div>
+
+<header class="topnav">
+  <div class="wrap">
+    <div class="brand"><a href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" stroke-width="2"/><path d="M8,33 L20,33 L24,33 L27,20 L31,46 L35,15 L38,33 L56,33" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Haruki Takahashi</span></a></div>
+    <nav>
+      <div class="nav-links">
+        <a href="#about" data-nav>About</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#achievements" data-nav>Activities</a>
+        <a href="#contact" data-nav>Contact</a>
+      </div>
+      <div class="nav-tools">
+        <a class="lang-link" href="en.html" hreflang="en">EN</a>
+        <button class="icon-btn" id="theme-toggle" aria-label="テーマ切り替え" type="button"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg></button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="メニュー" aria-controls="mobile-menu" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="wrap">
+      <a href="#about" data-nav>About</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#achievements" data-nav>Activities</a>
+      <a href="#contact" data-nav>Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-layout">
+    <div class="hero-copy reveal">
+      <div class="kicker">MEDICAL INFORMATICS × ENGINEERING</div>
+      <h1 class="name">髙橋 春喜<span class="en">Haruki Takahashi</span></h1>
+      <p class="tagline">生体データと医療情報を、<br><em>動くシステム</em>に。</p>
+      <p class="statement">同志社大学 生命医科学部で医療情報学を専攻しています。センサーによる生体信号の取得から、クラウドでの安全なデータ管理、AIによる解析まで。レイヤーをまたいで、設計から実装までを自分の手で作り切ることを大切にしています。</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#projects">制作物を見る <span class="arr">↓</span></a>
+        <a class="btn ghost" href="#contact">連絡する <span class="arr">→</span></a>
+      </div>
+    </div>
+    <aside class="monitor reveal" aria-label="Profile">
+      <div class="monitor-head"><span>PROFILE</span><span class="live">就職活動中</span></div>
+      <div class="monitor-ecg"><svg viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true"><path class="ecg-grid" d="M0,16 H400 M0,32 H400 M0,48 H400" vector-effect="non-scaling-stroke"/><path class="ecg-line" pathLength="1000" vector-effect="non-scaling-stroke" d="M0,40 L54,40 L62,35 L70,40 L84,40 L90,46 L98,6 L106,58 L112,40 L132,40 L142,31 L156,40 L226,40 L234,35 L242,40 L256,40 L262,46 L270,6 L278,58 L284,40 L304,40 L314,31 L328,40 L400,40"/></svg></div>
+      <dl><div class="row"><dt>SCHOOL</dt><dd>同志社大学 生命医科学部<span class=sub>医療情報学 専攻</span></dd></div><div class="row"><dt>TARGET</dt><dd>エンジニア・IT職</dd></div><div class="row"><dt>CERTS</dt><dd>基本情報技術者試験 合格<span class=sub>Azure AZ-900 · AI-900 · DP-900</span></dd></div><div class="row"><dt>INTERN</dt><dd>楽天グループ「夏の陣」参加<span class=sub>ハッカソン型短期インターンシップ</span></dd></div></dl>
+      <div class="monitor-links"><a href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">AtCoder ↗</a><a href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">Kaggle ↗</a><a href="https://github.com/haru-ki417" target="_blank" rel="noopener">GitHub ↗</a></div>
+    </aside>
+  </div>
+  <div class="scroll-cue"><div class="line"></div><span>SCROLL</span></div>
+</section>
+
+<section class="light" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">01 — ABOUT</div>
+      <h2>専攻と技術の接点</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>医療情報学を学ぶなかで、臨床データやセンサーから得られる生体信号を<strong>「どう安全に、どう意味のある形で扱うか」</strong>に関心を持つようになりました。</p><p>その問いに向き合うために、Arduinoによるセンサー制御、Azureを使ったクラウド設計、PythonやAIによるデータ解析まで、レイヤーをまたいで実際に作りながら学んでいます。</p><p>楽天グループのハッカソン型インターンシップ「夏の陣」に参加したほか、AtCoderとKaggleでアルゴリズムとデータ分析を継続的に磨いています。</p>
+        <div class="stats-row"><div class="stat"><div class="num" data-count="4">4</div><div class="lbl">IT CERTIFICATIONS</div></div><div class="stat"><div class="num" data-count="9">9</div><div class="lbl">PROJECTS</div></div><div class="stat"><div class="num" data-count="4">4</div><div class="lbl">SENSOR TYPES</div></div></div>
+      </div>
+      <div class="spec-grid reveal-stagger"><div class="spec-cell"><div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>LANGUAGES</div><ul><li>Python<small>データ分析・競技プログラミング</small></li><li>C / C++<small>Arduino・組み込み</small></li><li>C#<small>WPF (MVVM) / MonoGame / WinForms・xUnit</small></li><li>PowerShell<small>構成管理・自動化</small></li></ul></div><div class="spec-cell"><div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/></svg>WEB & CLOUD</div><ul><li>Microsoft Azure<small>App Service / SQL Database / IoT Hub / Cosmos DB / Blob</small></li><li>Blazor / ASP.NET Core<small>Webアプリを公開・運用</small></li><li>Next.js / FastAPI<small>チーム開発でフロント・バック両方を担当</small></li><li>Bicep / GitHub Actions<small>インフラのコード化と自動配置</small></li><li>OpenAI API<small>マルチモーダルAIの組み込み</small></li></ul></div><div class="spec-cell"><div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>HARDWARE & IoT</div><ul><li>Arduino / ESP32 / ESP-01S<small>シリアル通信・WiFi・MQTTでのIoT Hub送信</small></li><li>各種センサー<small>脈拍・3軸加速度・温湿度・RTC・I2C</small></li></ul></div><div class="spec-cell"><div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>DATA & AI</div><ul><li>PyTorch / ONNX Runtime<small>肺炎スクリーニングモデルの学習と組み込み</small></li><li>信号処理・画像処理<small>Welch法・FFT、マーチングキューブス・レイキャスティング</small></li><li>numpy / scipy<small>生体信号処理(rPPG)</small></li><li>Kaggle<small>実データでの分析・モデリング</small></li><li>AtCoder<small>アルゴリズムとデータ構造</small></li></ul></div></div>
+    </div>
+    <div class="cert-row reveal-stagger"><div class="cert-badge"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4.5v8c0 7-4.5 11.5-10 13.5C10.5 26.5 6 22 6 15V7.5L16 3z" stroke="#17946B" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6.5" stroke="#17946B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="cb-code">FE</div><div class="cb-name">基本情報技術者試験</div></div></div><div class="cert-badge"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4.5v8c0 7-4.5 11.5-10 13.5C10.5 26.5 6 22 6 15V7.5L16 3z" stroke="#17946B" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6.5" stroke="#17946B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="cb-code">AZ-900</div><div class="cb-name">Azure Fundamentals</div></div></div><div class="cert-badge"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4.5v8c0 7-4.5 11.5-10 13.5C10.5 26.5 6 22 6 15V7.5L16 3z" stroke="#17946B" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6.5" stroke="#17946B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="cb-code">AI-900</div><div class="cb-name">Azure AI Fundamentals</div></div></div><div class="cert-badge"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4.5v8c0 7-4.5 11.5-10 13.5C10.5 26.5 6 22 6 15V7.5L16 3z" stroke="#17946B" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6.5" stroke="#17946B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="cb-code">DP-900</div><div class="cb-name">Azure Data Fundamentals</div></div></div></div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">02 — PROJECTS</div>
+      <h2>制作物</h2>
+      <p>医療画像とAI、CTの3D表示、生体センサー、組み込み、システム管理、チーム開発、Webサービス、医療機関向けの測定ソフト、顕微鏡画像の解析。領域の異なる9つの制作物を、それぞれ設計から実装まで手がけました。「アプリを開く」から、スマホやパソコンのブラウザーでそのまま試せるものもあります。</p>
+    </div>
+    <ol class="p-index reveal"><li><a href="#p-dicom"><span class="pi-num">01</span><span class="pi-name">MyDicomViewer</span><span class="pi-cat">医療画像 × オンデバイスAI</span></a></li><li><a href="#p-abbild"><span class="pi-num">02</span><span class="pi-name">Abbild</span><span class="pi-cat">生体センサー × ゲーム</span></a></li><li><a href="#p-quake"><span class="pi-num">03</span><span class="pi-name">地震即時アラートシステム</span><span class="pi-cat">組み込み × IoT</span></a></li><li><a href="#p-usb"><span class="pi-num">04</span><span class="pi-name">Ultimate USB</span><span class="pi-cat">システム管理 × 自動化</span></a></li><li><a href="#p-aishow"><span class="pi-num">05</span><span class="pi-name">AI-SHOW（相性）</span><span class="pi-cat">チーム開発 × 生体信号</span></a></li><li><a href="#p-pulsemind"><span class="pi-num">06</span><span class="pi-name">Pulse & Mind Study</span><span class="pi-cat">学習記録 × 生体データ</span></a></li><li><a href="#p-tremor"><span class="pi-num">07</span><span class="pi-name">TremorScope</span><span class="pi-cat">振戦測定 × 信号処理</span></a></li><li><a href="#p-volume"><span class="pi-num">08</span><span class="pi-name">VolumeScope</span><span class="pi-cat">CT 3D × 画像処理</span></a></li><li><a href="#p-quant"><span class="pi-num">09</span><span class="pi-name">QuantScope</span><span class="pi-cat">顕微鏡画像 × 画像解析</span></a></li></ol>
+
+    <article class="project reveal" id="p-dicom">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/mydicom-ai.jpg" width="1400" height="794" alt="MyDicomViewerのAIスクリーニング画面。胸部X線に肺炎所見の推定確率94.7%とGrad-CAMのヒートマップが表示されている" loading="lazy"></div><div class="shot-tag">ON-DEVICE AI</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 01 — DESKTOP × ON-DEVICE AI × CLOUD</div>
+        <h3>MyDicomViewer</h3>
+        <div class="p-meta"><span>個人開発</span><span>Windows (WPF / .NET 10) + ブラウザー版</span><span>v1.0.0 公開</span></div>
+        <p class="p-tagline">PCの中で完結する肺炎スクリーニングAIを搭載した、DICOMビューア&クラウドPACS。</p>
+        <p class="p-body">読影ソフトと同じ操作感のビューアに、ONNX Runtimeで動くEfficientNet-B0の肺炎スクリーニングと、Grad-CAMによる根拠の表示を組み込みました。RSNAのデータで学習し、学習に使っていない2,669人分のテストデータで評価。MVVM構成・単体テスト・CI・インストーラーと自動更新まで整え、ソースコードをGitHubで公開しています。</p>
+        <dl class="p-metrics"><div><dt>AUC</dt><dd>0.884</dd></div><div><dt>Pointing Game</dt><dd>73.2%</dd></div><div><dt>CPU推論 / 枚</dt><dd>43 ms</dd></div><div><dt>単体テスト</dt><dd>43</dd></div></dl><ol class="point-list"><li>Grad-CAMをONNXのグラフに組み込み、1回の推論で確率とヒートマップを同時に出力</li><li>患者単位の分割、検証データでの閾値決定、信頼区間、根拠位置の評価までをモデルカードに整理</li><li>PS3.15準拠の匿名化、キーの暗号化保存、配布物へのキー混入をビルドで検出</li></ol>
+        <div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>ONNX Runtime</span><span>PyTorch</span><span>EfficientNet-B0</span><span>fo-dicom</span><span>Azure</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-01.html">詳しく見る <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/MyDicomViewer/" target="_blank" rel="noopener">アプリを開く ↗</a><a class="repo-link live" href="https://github.com/haru-ki417/MyDicomViewer/releases/latest" target="_blank" rel="noopener">Windows版をダウンロード ↗</a><a class="repo-link" href="https://github.com/haru-ki417/MyDicomViewer" target="_blank" rel="noopener">ソースコード ↗</a></div>
+      </div>
+    </article>
+    <article class="project reverse reveal" id="p-abbild">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/abbild-boss.jpg" width="1280" height="720" alt="Abbildのボス戦。毒の沼で多頭の竜ヒュドラと戦っている" loading="lazy"></div><div class="shot-tag">GAMEPLAY</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 02 — HARDWARE × GAME</div>
+        <h3>Abbild</h3>
+        <div class="p-meta"><span>個人開発</span><span>Windows (C# / MonoGame) + Arduino</span><span>ブラウザーでも遊べる</span></div>
+        <p class="p-tagline">心拍・振り・傾き・息で戦う。自作コントローラーで体を使って遊ぶ、100階層のダンジョンRPG。</p>
+        <p class="p-body">WinFormsで作った脈拍センサー連動のRPGを、C#とMonoGameで一から作り直しました。Arduinoの自作コントローラー(脈波・加速度・湿度センサー)で読み取った体の動きが、20種類のミニゲームの入力になります。キーボードやゲームパッドでも同じように遊べるよう体の入力を1つの形にまとめ、ルールは画面から切り離してテストしています。</p>
+        <dl class="p-metrics"><div><dt>体を使うミニゲーム</dt><dd>20</dd></div><div><dt>階層</dt><dd>100</dd></div><div><dt>テスト</dt><dd>78</dd></div><div><dt>「ふつう」のクリア率</dt><dd>約5割</dd></div></dl><ol class="point-list"><li>心拍の高ぶり・振った回数・傾き・息を1つの「体の入力」にまとめ、キーボードでは心拍を呼吸のガイドで再現</li><li>戦闘のルールは出来事のリストを返すだけにして画面と分離。自動プレイヤーに何百回も遊ばせて難しさを調整</li><li>HP0で「心停止」── 10秒以内の連打で蘇生する、CPRに着想を得たイベントを作り直し後も継承</li></ol>
+        <div class="stack-row"><span>C# / .NET 10</span><span>MonoGame</span><span>Arduino (C/C++)</span><span>シリアル通信</span><span>脈波・加速度・湿度センサー</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-02.html">詳しく見る <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/Abbild/" target="_blank" rel="noopener">ブラウザーで遊ぶ ↗</a><a class="repo-link" href="https://github.com/haru-ki417/Abbild" target="_blank" rel="noopener">ソースコード ↗</a></div>
+      </div>
+    </article>
+    <article class="project reveal" id="p-quake">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/seismometer-hw.jpg" width="1000" height="563" alt="地震アラート装置のハードウェア。3軸加速度センサー、OLED、ブザー、ESP-01Sなどをブレッドボード上に配線" loading="lazy"></div><div class="shot-tag">HARDWARE BUILD</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 03 — EMBEDDED × IoT</div>
+        <h3>地震即時アラートシステム</h3>
+        <div class="p-meta"><span>個人開発</span><span>Arduino Uno + ESP-01S</span></div>
+        <p class="p-tagline">揺れを検知した瞬間、スマートフォンに通知が届く。地震アラート装置を一式自作。</p>
+        <p class="p-body">3軸加速度センサーの生値をキャリブレーションで補正して揺れの大きさを算出し、OLEDに波形履歴を表示。揺れに応じた2段階の警戒レベルでブザーの間隔と音程を変え、画面を見なくても危険度が伝わるようにしました。</p>
+        <ol class="point-list"><li>ゼロ点オフセットと感度のキャリブレーションによる、揺れ量のリアルタイム算出</li><li>警戒レベルに応じて、ブザー・LED・OLED表示を切り替え</li><li>ESP-01SからTelegram Bot APIを経由して、スマートフォンへプッシュ通知</li></ol>
+        <div class="stack-row"><span>Arduino (C/C++)</span><span>ESP-01S</span><span>3軸加速度センサー</span><span>RTC</span><span>Telegram Bot API</span></div>
+        <div class="link-row"><a class="detail-link" href="case-03.html">詳しく見る <span>→</span></a></div>
+      </div>
+    </article>
+    <article class="project reverse reveal" id="p-usb">
+      <div class="p-visual diagram"><svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img"><defs><marker id="arr04jaindex" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6F857C"/></marker></defs><rect class="dnode dbox" x="155" y="10" width="150" height="50" rx="7" fill="rgba(255,255,255,0.015)" stroke="#E8A33D" stroke-width="1.3"/><text x="230.0" y="32.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">128GB USB</text><text x="230.0" y="48.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">Ventoy マルチブート</text><rect class="dnode dbox" x="10" y="100" width="136" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="78.0" y="124.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">01 起動ISO</text><text x="78.0" y="140.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">Ubuntu / WinPE ほか</text><rect class="dnode dbox" x="162" y="100" width="136" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="230.0" y="124.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">02 開発環境</text><text x="230.0" y="140.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">VS Code / Git / Python</text><rect class="dnode dbox" x="314" y="100" width="136" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="382.0" y="124.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">04 暗号化保管庫</text><text x="382.0" y="140.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">VeraCrypt AES-256</text><path class="dpath" d="M230,60 L230,97" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04jaindex)"/><path class="dpath" d="M230,78 L78,78 L78,97" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04jaindex)"/><path class="dpath" d="M230,78 L382,78 L382,97" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04jaindex)"/><rect class="dnode dbox" x="10" y="196" width="440" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#E8A33D" stroke-width="1.3"/><text x="230.0" y="220.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">Setup-UltimateUSB.ps1</text><text x="230.0" y="236.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">catalog.json 駆動・冪等セットアップ</text><path class="dpath" d="M78,196 L78,157" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04jaindex)"/><path class="dpath" d="M230,196 L230,157" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04jaindex)"/><path class="dpath" d="M382,196 L382,157" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04jaindex)"/><rect class="dnode" x="10" y="264" width="440" height="28" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3" stroke-dasharray="4 4"/><text x="230.0" y="282.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="10">自己検査 · BitLocker対応 · 案件管理 · 出動前点検</text></svg><div class="diagram-note">Ultimate USB — 構成</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 04 — SYSADMIN × AUTOMATION</div>
+        <h3>Ultimate USB</h3>
+        <div class="p-meta"><span>個人開発</span><span>Windows (PowerShell)</span></div>
+        <p class="p-tagline">1本のUSBメモリを「PCレスキュー・開発環境・暗号化保管庫」にする、PowerShellの構成管理。</p>
+        <p class="p-body">Ventoy・PortableApps・VeraCryptを土台に、catalog.jsonで定義したツール群を取得・配置するセットアップエンジンを実装。途中で中断しても、再実行すれば正しい状態に収束する冪等な設計です。</p>
+        <ol class="point-list"><li>レジューム対応ダウンロード・書庫検証・更新チェックを備えた冪等セットアップ</li><li>VS Code / Git / Python / Arduino IDE を、どのPCでも同じ環境で</li><li>感染PCの自己検査、BitLocker回復キーの退避、作業記録と報告書の自動生成</li></ol>
+        <div class="stack-row"><span>PowerShell</span><span>Ventoy</span><span>PortableApps</span><span>VeraCrypt</span><span>BitLocker</span></div>
+        <div class="link-row"><a class="detail-link" href="case-04.html">詳しく見る <span>→</span></a></div>
+      </div>
+    </article>
+    <article class="project reveal" id="p-aishow">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/vitalroom-interview.jpg" width="1400" height="709" alt="AI-SHOWの面接ルーム画面。面接官と応募者それぞれの心拍数・ストレス・HRVがリアルタイム表示されている" loading="lazy"></div><div class="shot-tag">TEAM HACKATHON</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 05 — TEAM HACKATHON × BIOSIGNAL</div>
+        <h3>AI-SHOW（相性）</h3>
+        <div class="p-meta"><span>チーム開発</span><span class="role">リーダー</span><span>Web (Next.js + FastAPI)</span><span>サーバー不要のWeb版</span></div>
+        <p class="p-tagline">Web面接の映像から心拍・ストレスを推定し、互いの緊張を共有して率直な対話を後押しするサービス。</p>
+        <p class="p-body">ハッカソンにチーム「Life &amp; Medical Hackers」で参加し、リーダーとして企画・フロントエンド・バックエンド・発表資料・プレゼンまでを担当。嘘を見抜くツールではなく、緊張を「同意のうえで共有する」ことを設計の軸にしました。</p>
+        <ol class="point-list"><li>顔映像からrPPG(POS法)で脈波を抽出し、心拍数・HRV・ストレスを非接触で推定</li><li>映像は保存せず、同意した数値のみを共有するプライバシー設計</li><li>AI音声面接/人対人面接の両モードと、面接後のレポート・ES照合サマリー自動生成</li><li>大会後、信号処理と面接ロジックをJavaScriptに移植し、サーバー不要でスマホからも使えるWeb版を公開(Python版と同じ入力で結果が一致することを確認)</li></ol>
+        <div class="stack-row"><span>Next.js 14</span><span>WebRTC</span><span>Web Speech API</span><span>FastAPI</span><span>numpy / scipy</span><span>rPPG</span><span>MediaPipe</span><span>PeerJS</span></div>
+        <div class="link-row"><a class="detail-link" href="case-05.html">詳しく見る <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/Harinezumi-AI-Hack/" target="_blank" rel="noopener">Web版を開く ↗</a><a class="repo-link" href="https://github.com/haru-ki417/Harinezumi-AI-Hack" target="_blank" rel="noopener">ソースコード ↗</a></div>
+      </div>
+    </article>
+    <article class="project reverse reveal" id="p-pulsemind">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/pms-home.jpg" width="1400" height="972" alt="Pulse & Mind Studyのホーム画面。今日の学習時間、1日のリズム、共通テストまでの残り日数、直近7日の学習時間、心拍が並んでいる" loading="lazy"></div><div class="shot-tag">LIVE ON AZURE</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 06 — WEB APP × IoT × CLOUD</div>
+        <h3>Pulse & Mind Study</h3>
+        <div class="p-meta"><span>個人開発</span><span>Web (Blazor / .NET 10)</span><span>Azureで公開中</span></div>
+        <p class="p-tagline">勉強と体調を、ひとつのグラフで。学習時間に睡眠・気分・心拍を重ねて記録する、受験生・大学生向けのWebアプリ。</p>
+        <p class="p-body">Arduinoの脈拍センサーやiPhoneのヘルスケアから心拍を取り込み、学習時間と重ねて表示します。「よく眠れた日は集中できているか」を順位相関と信頼区間で確かめられますが、14日分そろうまでは結論を出さない「言いすぎない」分析にしました。Azure上で公開し、だれでも登録して使えます。</p>
+        <dl class="p-metrics"><div><dt>テスト</dt><dd>67</dd></div><div><dt>結論までの日数</dt><dd>14日</dd></div><div><dt>トークン保存</dt><dd>SHA-256</dd></div><div><dt>グラフ用ライブラリ</dt><dd>0</dd></div></dl><ol class="point-list"><li>0〜24時の帯に学習と心拍を重ねる「1日のリズム」と、心拍に合わせて光が脈打つ集中モード</li><li>時刻はUTCで保存し、利用者のタイムゾーンで日を区切る(日付またぎ・夏時間もテスト)</li><li>機器トークンのハッシュ保存、マネージドIDでのDB接続、ヘルスケア取り込み時のXXE対策</li></ol>
+        <div class="stack-row"><span>C# / .NET 10</span><span>Blazor</span><span>ASP.NET Core Identity</span><span>EF Core</span><span>Azure App Service</span><span>Azure SQL</span><span>Bicep</span><span>GitHub Actions</span><span>Arduino</span></div>
+        <div class="link-row"><a class="detail-link" href="case-06.html">詳しく見る <span>→</span></a><a class="repo-link live" href="https://pulsemind-datzdltheb62e.azurewebsites.net" target="_blank" rel="noopener">アプリを開く ↗</a><a class="repo-link" href="https://github.com/haru-ki417/PulseMindStudy" target="_blank" rel="noopener">ソースコード ↗</a></div>
+      </div>
+    </article>
+    <article class="project reveal" id="p-tremor">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/tremor-result.jpg" width="1400" height="851" alt="TremorScopeの結果画面。安静時と姿勢時のピーク周波数・大きさ・推定変位・規則性と、両者の比較が表示されている" loading="lazy"></div><div class="shot-tag">MEASUREMENT AID</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 07 — DESKTOP × IoT × SIGNAL PROCESSING</div>
+        <h3>TremorScope</h3>
+        <div class="p-meta"><span>個人開発</span><span>Windows (WPF / .NET 10) + ESP32</span><span>スマホのセンサーで測れるWeb版</span></div>
+        <p class="p-tagline">手のふるえを加速度センサーで測り、安静時と姿勢時を数値で比べる、医療機関向けの測定補助ソフト。</p>
+        <p class="p-body">手の甲に付けた自作センサー(ESP32 + MPU6050)の信号をAzure IoT Hub経由で受け取り、安静時と姿勢時を20秒ずつ記録します。Welch法のスペクトルからピーク周波数・大きさ・推定変位・規則性を求め、診察の記録に貼れるレポートやDICOMとしてPACSへ送れます。センサーがなくても、模擬センサーで一通り試せます。</p>
+        <dl class="p-metrics"><div><dt>周波数の検証精度</dt><dd>±0.08 Hz</dd></div><div><dt>テスト</dt><dd>58</dd></div><div><dt>3軸の計測</dt><dd>50 Hz</dd></div><div><dt>仮名ID</dt><dd>HMAC</dd></div></dl><ol class="point-list"><li>重力と姿勢の変化を除き、Welch法で3軸を合算。センサーの向きによらずピーク周波数を求める</li><li>振り切れ・通信の欠け・腕の大きな動きを測定直後に検出し、その場で取り直せる品質確認</li><li>カルテ番号はPCの外に出さず、施設ごとの鍵によるHMAC-SHA256の仮名IDと測定値だけをクラウドへ</li></ol>
+        <div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>ESP32 + MPU6050</span><span>Azure IoT Hub</span><span>Cosmos DB</span><span>SQLite (EF Core)</span><span>DICOM / PACS</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-07.html">詳しく見る <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/TremorScope/" target="_blank" rel="noopener">アプリを開く ↗</a><a class="repo-link live" href="https://github.com/haru-ki417/TremorScope/releases/latest" target="_blank" rel="noopener">Windows版をダウンロード ↗</a><a class="repo-link" href="https://github.com/haru-ki417/TremorScope" target="_blank" rel="noopener">ソースコード ↗</a></div>
+      </div>
+    </article>
+    <article class="project reverse reveal" id="p-volume">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/vs-main.jpg" width="1400" height="851" alt="VolumeScopeの4分割画面。横断・冠状断・矢状断の断面と、骨のボリュームレンダリング" loading="lazy"></div><div class="shot-tag">CT 3D WORKSTATION</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 08 — DESKTOP × 3D MEDICAL IMAGING</div>
+        <h3>VolumeScope</h3>
+        <div class="p-meta"><span>個人開発</span><span>Windows (WPF / .NET 10) + ブラウザー版</span><span>v1.0.0 公開</span></div>
+        <p class="p-tagline">CTのDICOMから3断面と3Dを並べて表示し、計測や3Dプリント用のSTL書き出しまでできるCT 3Dワークステーション。</p>
+        <p class="p-body">CTのシリーズを位置情報から正しく3D化し、横断・冠状断・矢状断のMPRと、ボリュームレンダリング・面・MIPを表示します。マーチングキューブス法による穴のない面の生成と、CPUだけで動くレイキャスティングを自作しました。人工の胸部CT(見本の模型)が入っているので、データがなくても試せます。</p>
+        <dl class="p-metrics"><div><dt>球の体積の誤差</dt><dd>1%以内</dd></div><div><dt>テスト</dt><dd>47</dd></div><div><dt>高速化による差</dt><dd>0画素</dd></div><div><dt>レイキャスティング</dt><dd>CPU</dd></div></dl><ol class="point-list"><li>画像の位置を断面の法線に投影して並べ、ガントリー傾斜や斜めの撮影でもゆがまずに3D化</li><li>マーチングキューブス法で頂点を共有した閉じた面を作り、破片除去とTaubin法の平滑化を経てSTL / OBJへ</li><li>空の領域を飛ばす高速化をしても、飛ばさない場合と1画素も違わないことをテストで保証</li></ol>
+        <div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>fo-dicom</span><span>MPR</span><span>Marching Cubes</span><span>Ray casting</span><span>STL / OBJ</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-08.html">詳しく見る <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/VolumeScope/" target="_blank" rel="noopener">アプリを開く ↗</a><a class="repo-link live" href="https://github.com/haru-ki417/VolumeScope/releases/latest" target="_blank" rel="noopener">Windows版をダウンロード ↗</a><a class="repo-link" href="https://github.com/haru-ki417/VolumeScope" target="_blank" rel="noopener">ソースコード ↗</a></div>
+      </div>
+    </article>
+    <article class="project reveal" id="p-quant">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/qs-nuclei.jpg" width="1400" height="851" alt="QuantScopeで蛍光の細胞核を数えた画面。核ごとに色分けされ、右に計測結果の表が並ぶ" loading="lazy"></div><div class="shot-tag">IMAGE ANALYSIS</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 09 — IMAGE ANALYSIS × WEB</div>
+        <h3>QuantScope</h3>
+        <div class="p-meta"><span>個人開発</span><span>Windows (WPF / .NET 10) + ブラウザー版</span><span>研究・学習用</span></div>
+        <p class="p-tagline">顕微鏡の画像から、細胞の核や粒子を数えて測る。手順を「レシピ」として積み重ねる画像解析アプリ。</p>
+        <p class="p-body">授業で作った画像処理アプリを、研究・学習用の解析ツールとして作り直しました。ぼかし→二値化→形を整える、と31種類の処理を積み重ね、粒ごとの面積・形・明るさを計測します。免疫染色は染色を分けて(カラーデコンボリューション)核ごとのDABの量から陽性率を出します。画像処理と計測はすべて自作で、同じ計算の部品をWebAssemblyにしたブラウザー版も公開しています。</p>
+        <dl class="p-metrics"><div><dt>処理の種類</dt><dd>31</dd></div><div><dt>見本の核を正しく数える</dt><dd>70 / 70</dd></div><div><dt>テスト</dt><dd>73</dd></div><div><dt>外部の画像処理ライブラリ</dt><dd>0</dd></div></dl><ol class="point-list"><li>距離変換によるウォーターシェッドで、くっついた核を1画素の切れ目で分ける(浅いくぼみは持続性でまとめる)</li><li>Lambert–Beerの法則にもとづく染色の分離と、粒ごとの値の分布に大津の方法をかけた陽性しきい値</li><li>手順はレシピとして保存して一括処理に使え、条件と結果を1つのHTMLレポートに残せる</li></ol>
+        <div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>Blazor WebAssembly</span><span>画像処理(自作)</span><span>カラーデコンボリューション</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-09.html">詳しく見る <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/QuantScope/" target="_blank" rel="noopener">アプリを開く ↗</a><a class="repo-link" href="https://github.com/haru-ki417/QuantScope" target="_blank" rel="noopener">ソースコード ↗</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="achievements" id="achievements">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">03 — ACTIVITIES</div>
+      <h2>実績・活動</h2>
+      <p>学習と挑戦の記録です。</p>
+    </div>
+    <div class="achieve-grid reveal-stagger"><div class="achieve-cell"><div class="ac-top"><div class="ac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div><span class="ac-id">@haru_ki</span></div>
+        <h4>AtCoder</h4><p>競技プログラミングのコンテストで、アルゴリズムとデータ構造を継続的に鍛えています。</p><a class="ac-link" href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">プロフィール ↗</a></div><div class="achieve-cell"><div class="ac-top"><div class="ac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 7.5v9M9 12l5-4.5M10.5 11l4 5.5"/></svg></div><span class="ac-id">haruki0417</span></div>
+        <h4>Kaggle</h4><p>実データを使ったデータ分析とモデリングに取り組んでいます。</p><a class="ac-link" href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">プロフィール ↗</a></div><div class="achieve-cell"><div class="ac-top"><div class="ac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></div><span class="ac-id">haru-ki417</span></div>
+        <h4>GitHub</h4><p>MyDicomViewer・Pulse & Mind Study・TremorScope・VolumeScope・QuantScope(MIT License)と、ゲームのAbbildのソースコードを公開中。すべてCIで自動ビルド・テストし、ブラウザー版はGitHub Pagesに自動で公開しています。</p><a class="ac-link" href="https://github.com/haru-ki417" target="_blank" rel="noopener">プロフィール ↗</a></div></div>
+    <ul class="activity-list reveal"><li><span class="a-tag">INTERNSHIP</span><span class="a-title">楽天グループ「夏の陣」<small>ハッカソン型の短期インターンシップに参加</small></span><span class="a-status">参加済</span></li><li><span class="a-tag">HACKATHON</span><span class="a-title">チーム「Life &amp; Medical Hackers」リーダー<small>rPPGを用いた面接支援サービス AI-SHOW(相性)を開発</small></span><a class="a-status" href="#p-aishow">CASE 05 →</a></li><li><span class="a-tag">CERTIFICATION</span><span class="a-title">基本情報技術者試験 合格<small>Microsoft Azure AZ-900 / AI-900 / DP-900 取得</small></span><span class="a-status">4資格</span></li></ul>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap reveal">
+    <div class="label">04 — CONTACT</div>
+    <h2>お話しできる機会を、<br>楽しみにしています。</h2>
+    <p class="sub">インターンや選考に関するご連絡、制作物についてのご質問など、どうぞお気軽にご連絡ください。</p>
+    <div class="contact-layout">
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:hrk417506@gmail.com">
+          <span><span class="cc-label">EMAIL</span><span class="cc-value">hrk417506@gmail.com</span></span><span class="cc-arr">→</span>
+        </a>
+        <a class="contact-card" href="https://github.com/haru-ki417" target="_blank" rel="noopener">
+          <span><span class="cc-label">GITHUB</span><span class="cc-value">haru-ki417</span></span><span class="cc-arr">↗</span>
+        </a>
+        <a class="contact-card" href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">
+          <span><span class="cc-label">ATCODER</span><span class="cc-value">haru_ki</span></span><span class="cc-arr">↗</span>
+        </a>
+        <a class="contact-card" href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">
+          <span><span class="cc-label">KAGGLE</span><span class="cc-value">haruki0417</span></span><span class="cc-arr">↗</span>
+        </a>
+      </div>
+      <form class="contact-form" id="contact-form" data-to="hrk417506@gmail.com" data-subject="ポートフォリオ経由のご連絡">
+        <div class="field"><label for="cf-name">お名前</label><input id="cf-name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="cf-email">メールアドレス</label><input id="cf-email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="cf-message">メッセージ</label><textarea id="cf-message" rows="5" required></textarea></div>
+        <button class="btn primary" type="submit">メールを作成する <span class="arr">→</span></button>
+        <div class="form-note">ボタンを押すと、入力内容が反映された状態でメールアプリが開きます。</div>
+      </form>
+    </div>
+    <div class="copyright"><span>© 2026 Haruki Takahashi</span><span>同志社大学 生命医科学部 / 医療情報学</span></div>
+  </div>
+</footer>
+
+<div id="totop" role="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+<script src="assets/main.js"></script>
+</body>
+</html>

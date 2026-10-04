@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haruki Takahashi Portfolio</title>
+<meta name="description" content="Portfolio of Haruki Takahashi, a Medical Informatics student at Doshisha University. Nine projects: an AI-powered DICOM viewer, an RPG played with your heartbeat and body, an earthquake alert device, USB configuration automation, contactless vitals via rPPG, a study-and-wellbeing web app, a tremor measurement aid, a CT 3D workstation and a microscopy image-analysis app — most can be tried right in the browser.">
+<meta name="theme-color" content="#0A1210">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Haruki Takahashi Portfolio">
+<meta property="og:description" content="Portfolio of Haruki Takahashi, a Medical Informatics student at Doshisha University. Nine projects: an AI-powered DICOM viewer, an RPG played with your heartbeat and body, an earthquake alert device, USB configuration automation, contactless vitals via rPPG, a study-and-wellbeing web app, a tremor measurement aid, a CT 3D workstation and a microscopy image-analysis app — most can be tried right in the browser.">
+<meta property="og:image" content="https://haru-ki417.github.io/portfolio/assets/og-image.png">
+<meta property="og:url" content="https://haru-ki417.github.io/portfolio/en.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important}#preloader{display:none!important}.diagram .dbox,.diagram .dpath{stroke-dashoffset:0!important}.diagram text{opacity:1!important}</style></noscript>
+</head>
+<body>
+
+<div id="preloader"><svg viewBox="0 0 200 56"><path class="pl-line" d="M0,28 L60,28 L72,28 L82,8 L94,48 L104,14 L116,28 L136,28 L200,28"/></svg></div>
+<div id="scrollbar"></div>
+<div id="cursor-glow"></div>
+
+<header class="topnav">
+  <div class="wrap">
+    <div class="brand"><a href="en.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="14" stroke-width="2"/><path d="M8,33 L20,33 L24,33 L27,20 L31,46 L35,15 L38,33 L56,33" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Haruki Takahashi</span></a></div>
+    <nav>
+      <div class="nav-links">
+        <a href="#about" data-nav>About</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#achievements" data-nav>Activities</a>
+        <a href="#contact" data-nav>Contact</a>
+      </div>
+      <div class="nav-tools">
+        <a class="lang-link" href="index.html" hreflang="ja">JA</a>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" type="button"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg></button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu" aria-controls="mobile-menu" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="wrap">
+      <a href="#about" data-nav>About</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#achievements" data-nav>Activities</a>
+      <a href="#contact" data-nav>Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-layout">
+    <div class="hero-copy reveal">
+      <div class="kicker">MEDICAL INFORMATICS × ENGINEERING</div>
+      <h1 class="name">Haruki Takahashi<span class="en">髙橋 春喜</span></h1>
+      <p class="tagline">Turning biosignals and medical data<br>into <em>working systems</em>.</p>
+      <p class="statement">I study Medical Informatics at Doshisha University’s Faculty of Life and Medical Sciences. From capturing biosignals with sensors, to managing data securely in the cloud, to analyzing it with AI — I enjoy designing and building across every layer, end to end.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#projects">View projects <span class="arr">↓</span></a>
+        <a class="btn ghost" href="#contact">Get in touch <span class="arr">→</span></a>
+      </div>
+    </div>
+    <aside class="monitor reveal" aria-label="Profile">
+      <div class="monitor-head"><span>PROFILE</span><span class="live">Seeking engineering roles</span></div>
+      <div class="monitor-ecg"><svg viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true"><path class="ecg-grid" d="M0,16 H400 M0,32 H400 M0,48 H400" vector-effect="non-scaling-stroke"/><path class="ecg-line" pathLength="1000" vector-effect="non-scaling-stroke" d="M0,40 L54,40 L62,35 L70,40 L84,40 L90,46 L98,6 L106,58 L112,40 L132,40 L142,31 L156,40 L226,40 L234,35 L242,40 L256,40 L262,46 L270,6 L278,58 L284,40 L304,40 L314,31 L328,40 L400,40"/></svg></div>
+      <dl><div class="row"><dt>SCHOOL</dt><dd>Doshisha University<span class=sub>Life & Medical Sciences — Medical Informatics</span></dd></div><div class="row"><dt>TARGET</dt><dd>Software / IT engineering</dd></div><div class="row"><dt>CERTS</dt><dd>Fundamental IT Engineer (FE)<span class=sub>Azure AZ-900 · AI-900 · DP-900</span></dd></div><div class="row"><dt>INTERN</dt><dd>Rakuten “Natsu no Jin”<span class=sub>Hackathon-style internship (completed)</span></dd></div></dl>
+      <div class="monitor-links"><a href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">AtCoder ↗</a><a href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">Kaggle ↗</a><a href="https://github.com/haru-ki417" target="_blank" rel="noopener">GitHub ↗</a></div>
+    </aside>
+  </div>
+  <div class="scroll-cue"><div class="line"></div><span>SCROLL</span></div>
+</section>
+
+<section class="light" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">01 — ABOUT</div>
+      <h2>Where my major meets engineering</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>Studying Medical Informatics made me curious about one question: <strong>how do we handle clinical data and biosignals safely, and in a way that actually means something?</strong></p><p>To explore it, I build things across layers — sensor control with Arduino, cloud design on Azure, and data analysis with Python and AI.</p><p>I completed Rakuten’s hackathon-style internship “Natsu no Jin”, and keep sharpening algorithms and data analysis on AtCoder and Kaggle.</p>
+        <div class="stats-row"><div class="stat"><div class="num" data-count="4">4</div><div class="lbl">IT CERTIFICATIONS</div></div><div class="stat"><div class="num" data-count="9">9</div><div class="lbl">PROJECTS</div></div><div class="stat"><div class="num" data-count="4">4</div><div class="lbl">SENSOR TYPES</div></div></div>
+      </div>
+      <div class="spec-grid reveal-stagger"><div class="spec-cell"><div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>LANGUAGES</div><ul><li>Python<small>data analysis, competitive programming</small></li><li>C / C++<small>Arduino, embedded</small></li><li>C#<small>WPF (MVVM) / MonoGame / WinForms, xUnit</small></li><li>PowerShell<small>configuration & automation</small></li></ul></div><div class="spec-cell"><div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/></svg>WEB & CLOUD</div><ul><li>Microsoft Azure<small>App Service / SQL Database / IoT Hub / Cosmos DB / Blob</small></li><li>Blazor / ASP.NET Core<small>a live web app I run</small></li><li>Next.js / FastAPI<small>frontend and backend in a team build</small></li><li>Bicep / GitHub Actions<small>infrastructure as code, automated deploys</small></li><li>OpenAI API<small>multimodal AI integration</small></li></ul></div><div class="spec-cell"><div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>HARDWARE & IoT</div><ul><li>Arduino / ESP32 / ESP-01S<small>serial, WiFi, MQTT to IoT Hub</small></li><li>Sensors<small>pulse, 3-axis accel, temp/humidity, RTC, I2C</small></li></ul></div><div class="spec-cell"><div class="cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>DATA & AI</div><ul><li>PyTorch / ONNX Runtime<small>training and shipping a pneumonia model</small></li><li>Signal & image processing<small>Welch, FFT, marching cubes, ray casting</small></li><li>numpy / scipy<small>biosignal processing (rPPG)</small></li><li>Kaggle<small>real-world data & modeling</small></li><li>AtCoder<small>algorithms & data structures</small></li></ul></div></div>
+    </div>
+    <div class="cert-row reveal-stagger"><div class="cert-badge"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4.5v8c0 7-4.5 11.5-10 13.5C10.5 26.5 6 22 6 15V7.5L16 3z" stroke="#17946B" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6.5" stroke="#17946B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="cb-code">FE</div><div class="cb-name">Fundamental IT Engineer</div></div></div><div class="cert-badge"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4.5v8c0 7-4.5 11.5-10 13.5C10.5 26.5 6 22 6 15V7.5L16 3z" stroke="#17946B" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6.5" stroke="#17946B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="cb-code">AZ-900</div><div class="cb-name">Azure Fundamentals</div></div></div><div class="cert-badge"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4.5v8c0 7-4.5 11.5-10 13.5C10.5 26.5 6 22 6 15V7.5L16 3z" stroke="#17946B" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6.5" stroke="#17946B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="cb-code">AI-900</div><div class="cb-name">Azure AI Fundamentals</div></div></div><div class="cert-badge"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l10 4.5v8c0 7-4.5 11.5-10 13.5C10.5 26.5 6 22 6 15V7.5L16 3z" stroke="#17946B" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6.5" stroke="#17946B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><div class="cb-code">DP-900</div><div class="cb-name">Azure Data Fundamentals</div></div></div></div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">02 — PROJECTS</div>
+      <h2>Projects</h2>
+      <p>Medical imaging, biosensors, embedded hardware, systems automation, a team build, a live web service and clinical measurement software — nine projects across different domains, including CT 3D visualization and microscopy image analysis, each designed and built end to end. Many open right in your browser via “Open the app”.</p>
+    </div>
+    <ol class="p-index reveal"><li><a href="#p-dicom"><span class="pi-num">01</span><span class="pi-name">MyDicomViewer</span><span class="pi-cat">Medical imaging × On-device AI</span></a></li><li><a href="#p-abbild"><span class="pi-num">02</span><span class="pi-name">Abbild</span><span class="pi-cat">Biosensor × Game</span></a></li><li><a href="#p-quake"><span class="pi-num">03</span><span class="pi-name">Earthquake Alert System</span><span class="pi-cat">Embedded × IoT</span></a></li><li><a href="#p-usb"><span class="pi-num">04</span><span class="pi-name">Ultimate USB</span><span class="pi-cat">Sysadmin × Automation</span></a></li><li><a href="#p-aishow"><span class="pi-num">05</span><span class="pi-name">AI-SHOW (Aishō)</span><span class="pi-cat">Team build × Biosignals</span></a></li><li><a href="#p-pulsemind"><span class="pi-num">06</span><span class="pi-name">Pulse & Mind Study</span><span class="pi-cat">Study log × Biodata</span></a></li><li><a href="#p-tremor"><span class="pi-num">07</span><span class="pi-name">TremorScope</span><span class="pi-cat">Tremor measurement × DSP</span></a></li><li><a href="#p-volume"><span class="pi-num">08</span><span class="pi-name">VolumeScope</span><span class="pi-cat">CT 3D × Image processing</span></a></li><li><a href="#p-quant"><span class="pi-num">09</span><span class="pi-name">QuantScope</span><span class="pi-cat">Microscopy × Image analysis</span></a></li></ol>
+
+    <article class="project reveal" id="p-dicom">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/mydicom-ai.jpg" width="1400" height="794" alt="MyDicomViewer AI screening: a chest X-ray with a 94.7% pneumonia probability and a Grad-CAM heatmap overlay" loading="lazy"></div><div class="shot-tag">ON-DEVICE AI</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 01 — DESKTOP × ON-DEVICE AI × CLOUD</div>
+        <h3>MyDicomViewer</h3>
+        <div class="p-meta"><span>Solo project</span><span>Windows (WPF / .NET 10) + Web</span><span>v1.0.0 released</span></div>
+        <p class="p-tagline">A DICOM viewer and cloud PACS with a pneumonia-screening AI that runs entirely on the PC.</p>
+        <p class="p-body">A viewer that feels like clinical reading software, with on-device pneumonia screening (EfficientNet-B0 on ONNX Runtime) and Grad-CAM explanations. Trained on RSNA data and evaluated on 2,669 held-out patients. Built with MVVM, unit tests, CI, an installer and auto-updates — source code is public on GitHub.</p>
+        <dl class="p-metrics"><div><dt>AUC</dt><dd>0.884</dd></div><div><dt>Pointing Game</dt><dd>73.2%</dd></div><div><dt>CPU inference</dt><dd>43 ms</dd></div><div><dt>unit tests</dt><dd>43</dd></div></dl><ol class="point-list"><li>Grad-CAM built into the ONNX graph: probability and heatmap from a single inference</li><li>Model card with patient-level splits, validation-set threshold, confidence intervals and localization metrics</li><li>PS3.15 de-identification, encrypted key storage, and a release build that stops if secrets leak in</li></ol>
+        <div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>ONNX Runtime</span><span>PyTorch</span><span>EfficientNet-B0</span><span>fo-dicom</span><span>Azure</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-01.html">Read the case study (JA) <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/MyDicomViewer/" target="_blank" rel="noopener">Open the app ↗</a><a class="repo-link live" href="https://github.com/haru-ki417/MyDicomViewer/releases/latest" target="_blank" rel="noopener">Download for Windows ↗</a><a class="repo-link" href="https://github.com/haru-ki417/MyDicomViewer" target="_blank" rel="noopener">Source code ↗</a></div>
+      </div>
+    </article>
+    <article class="project reverse reveal" id="p-abbild">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/abbild-boss.jpg" width="1280" height="720" alt="Abbild boss battle against a many-headed hydra in a poison swamp" loading="lazy"></div><div class="shot-tag">GAMEPLAY</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 02 — HARDWARE × GAME</div>
+        <h3>Abbild</h3>
+        <div class="p-meta"><span>Solo project</span><span>Windows (C# / MonoGame) + Arduino</span><span>Playable in the browser</span></div>
+        <p class="p-tagline">Fight with your heartbeat, swings, tilt and breath — a 100-floor dungeon RPG played with your body through a self-built controller.</p>
+        <p class="p-body">A ground-up rebuild, in C# and MonoGame, of my earlier WinForms pulse-sensor RPG. Body movement read by a self-built Arduino controller (pulse, accelerometer and humidity sensors) drives 20 minigames. Body input is abstracted so the game plays the same on a keyboard or gamepad, and the rules are separated from the UI and unit-tested.</p>
+        <dl class="p-metrics"><div><dt>body-driven minigames</dt><dd>20</dd></div><div><dt>floors</dt><dd>100</dd></div><div><dt>tests</dt><dd>78</dd></div><div><dt>clear rate on Normal</dt><dd>~50%</dd></div></dl><ol class="point-list"><li>Heart-rate arousal, swing count, tilt and breath unified into one “body input”; on a keyboard, heart rate is simulated with a breathing guide</li><li>Battle rules only return a list of events, fully separated from the UI; difficulty tuned by letting a bot play hundreds of runs</li><li>At 0 HP, a “cardiac arrest” event: mash within 10 seconds to revive — a CPR-inspired mechanic kept from the original</li></ol>
+        <div class="stack-row"><span>C# / .NET 10</span><span>MonoGame</span><span>Arduino (C/C++)</span><span>Serial</span><span>Pulse / accel / humidity</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-02.html">Read the case study (JA) <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/Abbild/" target="_blank" rel="noopener">Play in the browser ↗</a><a class="repo-link" href="https://github.com/haru-ki417/Abbild" target="_blank" rel="noopener">Source code ↗</a></div>
+      </div>
+    </article>
+    <article class="project reveal" id="p-quake">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/seismometer-hw.jpg" width="1000" height="563" alt="Hardware build with a 3-axis accelerometer, OLED, buzzer and ESP-01S on a breadboard" loading="lazy"></div><div class="shot-tag">HARDWARE BUILD</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 03 — EMBEDDED × IoT</div>
+        <h3>Earthquake Alert System</h3>
+        <div class="p-meta"><span>Solo project</span><span>Arduino Uno + ESP-01S</span></div>
+        <p class="p-tagline">The moment it detects shaking, your phone gets a push notification — a self-built earthquake alert device.</p>
+        <p class="p-body">Raw 3-axis accelerometer readings are calibrated to compute shake magnitude, shown as a live waveform on an OLED. Two alert levels change the buzzer’s rhythm and pitch, so the danger level is clear without looking at a screen.</p>
+        <ol class="point-list"><li>Real-time shake magnitude with zero-offset and sensitivity calibration</li><li>Buzzer, LED and OLED output change with the alert level</li><li>Push notifications to a phone via ESP-01S and the Telegram Bot API</li></ol>
+        <div class="stack-row"><span>Arduino (C/C++)</span><span>ESP-01S</span><span>3-axis accelerometer</span><span>RTC</span><span>Telegram Bot API</span></div>
+        <div class="link-row"><a class="detail-link" href="case-03.html">Read the case study (JA) <span>→</span></a></div>
+      </div>
+    </article>
+    <article class="project reverse reveal" id="p-usb">
+      <div class="p-visual diagram"><svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img"><defs><marker id="arr04enindex" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6F857C"/></marker></defs><rect class="dnode dbox" x="155" y="10" width="150" height="50" rx="7" fill="rgba(255,255,255,0.015)" stroke="#E8A33D" stroke-width="1.3"/><text x="230.0" y="32.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">128GB USB</text><text x="230.0" y="48.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">Ventoy multi-boot</text><rect class="dnode dbox" x="10" y="100" width="136" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="78.0" y="124.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">01 Boot ISOs</text><text x="78.0" y="140.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">Ubuntu / WinPE etc.</text><rect class="dnode dbox" x="162" y="100" width="136" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="230.0" y="124.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">02 Dev env</text><text x="230.0" y="140.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">VS Code / Git / Python</text><rect class="dnode dbox" x="314" y="100" width="136" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3"/><text x="382.0" y="124.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">04 Vault</text><text x="382.0" y="140.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">VeraCrypt AES-256</text><path class="dpath" d="M230,60 L230,97" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04enindex)"/><path class="dpath" d="M230,78 L78,78 L78,97" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04enindex)"/><path class="dpath" d="M230,78 L382,78 L382,97" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04enindex)"/><rect class="dnode dbox" x="10" y="196" width="440" height="54" rx="7" fill="rgba(255,255,255,0.015)" stroke="#E8A33D" stroke-width="1.3"/><text x="230.0" y="220.0" text-anchor="middle" fill="#E6EDE9" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="11">Setup-UltimateUSB.ps1</text><text x="230.0" y="236.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="9">catalog.json-driven, idempotent</text><path class="dpath" d="M78,196 L78,157" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04enindex)"/><path class="dpath" d="M230,196 L230,157" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04enindex)"/><path class="dpath" d="M382,196 L382,157" fill="none" stroke="#6F857C" stroke-width="1.2" marker-end="url(#arr04enindex)"/><rect class="dnode" x="10" y="264" width="440" height="28" rx="7" fill="rgba(255,255,255,0.015)" stroke="#35D9A0" stroke-width="1.3" stroke-dasharray="4 4"/><text x="230.0" y="282.0" text-anchor="middle" fill="#8FA39B" font-family="JetBrains Mono, Noto Sans JP, monospace" font-size="10">self-check · BitLocker · case log · readiness check</text></svg><div class="diagram-note">Ultimate USB — architecture</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 04 — SYSADMIN × AUTOMATION</div>
+        <h3>Ultimate USB</h3>
+        <div class="p-meta"><span>Solo project</span><span>Windows (PowerShell)</span></div>
+        <p class="p-tagline">PowerShell-driven configuration that turns one USB drive into a PC rescue kit, dev environment and encrypted vault.</p>
+        <p class="p-body">On top of Ventoy, PortableApps and VeraCrypt, a setup engine fetches and places every tool defined in catalog.json. It is idempotent: if interrupted, simply re-run it and it converges to the correct state.</p>
+        <ol class="point-list"><li>Idempotent setup with resumable downloads, archive verification and update checks</li><li>The same VS Code / Git / Python / Arduino IDE environment on any PC</li><li>Self-check for infected PCs, BitLocker recovery-key handling, auto-generated work reports</li></ol>
+        <div class="stack-row"><span>PowerShell</span><span>Ventoy</span><span>PortableApps</span><span>VeraCrypt</span><span>BitLocker</span></div>
+        <div class="link-row"><a class="detail-link" href="case-04.html">Read the case study (JA) <span>→</span></a></div>
+      </div>
+    </article>
+    <article class="project reveal" id="p-aishow">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/vitalroom-interview.jpg" width="1400" height="709" alt="AI-SHOW interview room showing live heart rate, stress and HRV for both interviewer and candidate" loading="lazy"></div><div class="shot-tag">TEAM HACKATHON</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 05 — TEAM HACKATHON × BIOSIGNAL</div>
+        <h3>AI-SHOW (Aishō)</h3>
+        <div class="p-meta"><span>Team project</span><span class="role">Team lead</span><span>Web (Next.js + FastAPI)</span><span>Serverless web edition</span></div>
+        <p class="p-tagline">Estimates heart rate and stress from a video interview, so both sides can share their nerves and talk more openly.</p>
+        <p class="p-body">Built at a hackathon with team “Life &amp; Medical Hackers”. As team lead I handled ideation, frontend, backend, the pitch deck and the presentation. It is not a lie detector: the core idea is sharing nervousness <em>with consent</em>.</p>
+        <ol class="point-list"><li>Contactless heart rate, HRV and stress from face video via rPPG (POS method)</li><li>Privacy by design: no video stored, only consented numbers are shared</li><li>AI voice-interview and human modes, plus auto-generated post-interview reports</li><li>After the event, I ported the signal processing and interview logic to JavaScript and published a serverless web edition that runs on phones — verified to match the Python version on identical inputs</li></ol>
+        <div class="stack-row"><span>Next.js 14</span><span>WebRTC</span><span>Web Speech API</span><span>FastAPI</span><span>numpy / scipy</span><span>rPPG</span><span>MediaPipe</span><span>PeerJS</span></div>
+        <div class="link-row"><a class="detail-link" href="case-05.html">Read the case study (JA) <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/Harinezumi-AI-Hack/" target="_blank" rel="noopener">Open the web edition ↗</a><a class="repo-link" href="https://github.com/haru-ki417/Harinezumi-AI-Hack" target="_blank" rel="noopener">Source code ↗</a></div>
+      </div>
+    </article>
+    <article class="project reverse reveal" id="p-pulsemind">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/pms-home.jpg" width="1400" height="972" alt="Pulse & Mind Study home screen with today’s study time, the daily rhythm band, exam countdown, the last 7 days, and heart rate" loading="lazy"></div><div class="shot-tag">LIVE ON AZURE</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 06 — WEB APP × IoT × CLOUD</div>
+        <h3>Pulse & Mind Study</h3>
+        <div class="p-meta"><span>Solo project</span><span>Web (Blazor / .NET 10)</span><span>Live on Azure</span></div>
+        <p class="p-tagline">Study and wellbeing on one timeline: a web app for students that records study time alongside sleep, mood and heart rate.</p>
+        <p class="p-body">Heart rate comes in from an Arduino pulse sensor or an iPhone Health export and is shown alongside study time. Users can check whether better sleep means better focus, using rank correlation with confidence intervals — and the app refuses to draw conclusions until 14 days of data exist. It is live on Azure for anyone to sign up.</p>
+        <dl class="p-metrics"><div><dt>tests</dt><dd>67</dd></div><div><dt>before conclusions</dt><dd>14 days</dd></div><div><dt>token storage</dt><dd>SHA-256</dd></div><div><dt>chart libraries</dt><dd>0</dd></div></dl><ol class="point-list"><li>A 24-hour “daily rhythm” band overlaying study and heart rate, plus a focus mode whose light pulses with your heartbeat</li><li>Times stored in UTC and split into days in the user’s time zone (midnight crossings and DST are tested)</li><li>Hashed device tokens, managed-identity database access, and XXE-safe Health imports</li></ol>
+        <div class="stack-row"><span>C# / .NET 10</span><span>Blazor</span><span>ASP.NET Core Identity</span><span>EF Core</span><span>Azure App Service</span><span>Azure SQL</span><span>Bicep</span><span>GitHub Actions</span><span>Arduino</span></div>
+        <div class="link-row"><a class="detail-link" href="case-06.html">Read the case study (JA) <span>→</span></a><a class="repo-link live" href="https://pulsemind-datzdltheb62e.azurewebsites.net" target="_blank" rel="noopener">Open the app ↗</a><a class="repo-link" href="https://github.com/haru-ki417/PulseMindStudy" target="_blank" rel="noopener">Source code ↗</a></div>
+      </div>
+    </article>
+    <article class="project reveal" id="p-tremor">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/tremor-result.jpg" width="1400" height="851" alt="TremorScope result screen comparing rest and postural tremor: peak frequency, amplitude, displacement and regularity" loading="lazy"></div><div class="shot-tag">MEASUREMENT AID</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 07 — DESKTOP × IoT × SIGNAL PROCESSING</div>
+        <h3>TremorScope</h3>
+        <div class="p-meta"><span>Solo project</span><span>Windows (WPF / .NET 10) + ESP32</span><span>Web edition uses the phone’s sensor</span></div>
+        <p class="p-tagline">Measures hand tremor with an accelerometer and compares rest vs. posture numerically — a measurement aid for clinics.</p>
+        <p class="p-body">Signals from a self-built sensor (ESP32 + MPU6050) on the back of the hand arrive via Azure IoT Hub; rest and postural tremor are each recorded for 20 seconds. Peak frequency, amplitude, estimated displacement and regularity come from a Welch spectrum, and results go into a printable report or to a PACS as DICOM. A simulated sensor lets anyone try it without hardware.</p>
+        <dl class="p-metrics"><div><dt>frequency accuracy</dt><dd>±0.08 Hz</dd></div><div><dt>tests</dt><dd>58</dd></div><div><dt>3-axis sampling</dt><dd>50 Hz</dd></div><div><dt>pseudonym IDs</dt><dd>HMAC</dd></div></dl><ol class="point-list"><li>Gravity and posture drift removed; Welch spectra summed across 3 axes so results do not depend on sensor orientation</li><li>Quality checks right after each recording (clipping, dropped packets, large arm movement) with instant retakes</li><li>Medical record numbers never leave the PC: only HMAC-SHA256 pseudonym IDs and measurements go to the cloud</li></ol>
+        <div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>ESP32 + MPU6050</span><span>Azure IoT Hub</span><span>Cosmos DB</span><span>SQLite (EF Core)</span><span>DICOM / PACS</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-07.html">Read the case study (JA) <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/TremorScope/" target="_blank" rel="noopener">Open the app ↗</a><a class="repo-link live" href="https://github.com/haru-ki417/TremorScope/releases/latest" target="_blank" rel="noopener">Download for Windows ↗</a><a class="repo-link" href="https://github.com/haru-ki417/TremorScope" target="_blank" rel="noopener">Source code ↗</a></div>
+      </div>
+    </article>
+    <article class="project reverse reveal" id="p-volume">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/vs-main.jpg" width="1400" height="851" alt="VolumeScope four-pane view: axial, coronal and sagittal planes plus a 3D bone volume rendering" loading="lazy"></div><div class="shot-tag">CT 3D WORKSTATION</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 08 — DESKTOP × 3D MEDICAL IMAGING</div>
+        <h3>VolumeScope</h3>
+        <div class="p-meta"><span>Solo project</span><span>Windows (WPF / .NET 10) + Web</span><span>v1.0.0 released</span></div>
+        <p class="p-tagline">A CT 3D workstation: three orthogonal planes and 3D side by side, with measurements and STL export for 3D printing.</p>
+        <p class="p-body">CT series are rebuilt into 3D from their spatial metadata, then shown as axial/coronal/sagittal MPR alongside volume rendering, surfaces and MIP. Watertight marching-cubes surfaces and a CPU-only ray caster are implemented from scratch. A built-in synthetic chest CT lets anyone try it without data.</p>
+        <dl class="p-metrics"><div><dt>sphere volume error</dt><dd>within 1%</dd></div><div><dt>tests</dt><dd>47</dd></div><div><dt>diff from speed-up</dt><dd>0 px</dd></div><div><dt>ray casting</dt><dd>CPU</dd></div></dl><ol class="point-list"><li>Slices ordered by projecting positions onto the plane normal, so gantry tilt and oblique scans rebuild without distortion</li><li>Watertight marching-cubes surfaces with shared vertices, fragment removal and Taubin smoothing, exported to STL / OBJ</li><li>Tests guarantee empty-space skipping produces exactly the same pixels as rendering without it</li></ol>
+        <div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>fo-dicom</span><span>MPR</span><span>Marching Cubes</span><span>Ray casting</span><span>STL / OBJ</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-08.html">Read the case study (JA) <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/VolumeScope/" target="_blank" rel="noopener">Open the app ↗</a><a class="repo-link live" href="https://github.com/haru-ki417/VolumeScope/releases/latest" target="_blank" rel="noopener">Download for Windows ↗</a><a class="repo-link" href="https://github.com/haru-ki417/VolumeScope" target="_blank" rel="noopener">Source code ↗</a></div>
+      </div>
+    </article>
+    <article class="project reveal" id="p-quant">
+      <div class="p-visual shot"><div class="shot-inner"><img src="assets/qs-nuclei.jpg" width="1400" height="851" alt="QuantScope counting fluorescent nuclei, each colour-coded, with the measurement table on the right" loading="lazy"></div><div class="shot-tag">IMAGE ANALYSIS</div></div>
+      <div class="p-text">
+        <div class="p-kicker">CASE 09 — IMAGE ANALYSIS × WEB</div>
+        <h3>QuantScope</h3>
+        <div class="p-meta"><span>Solo project</span><span>Windows (WPF / .NET 10) + Web</span><span>For research & learning</span></div>
+        <p class="p-tagline">Count and measure nuclei and particles in microscopy images, by stacking processing steps into a reusable “recipe”.</p>
+        <p class="p-body">A ground-up rebuild of an image-processing app from a class assignment, now an analysis tool for research and learning. Stack 31 operations (blur → threshold → morphology…) and measure area, shape and intensity per particle. For IHC, colour deconvolution separates the stains and the positive rate comes from DAB per nucleus. All image processing and measurement is hand-written, and the same core runs in the browser via WebAssembly.</p>
+        <dl class="p-metrics"><div><dt>operations</dt><dd>31</dd></div><div><dt>nuclei counted correctly</dt><dd>70 / 70</dd></div><div><dt>tests</dt><dd>73</dd></div><div><dt>image libraries</dt><dd>0</dd></div></dl><ol class="point-list"><li>Distance-transform watershed splits touching nuclei with a one-pixel cut (shallow dips merged by persistence)</li><li>Lambert–Beer colour deconvolution and an Otsu threshold on per-particle values for positivity</li><li>Recipes are saved and batch-applied to folders; conditions and results go into a single HTML report</li></ol>
+        <div class="stack-row"><span>C# / WPF (MVVM)</span><span>.NET 10</span><span>Blazor WebAssembly</span><span>Image processing (from scratch)</span><span>Colour deconvolution</span><span>xUnit</span><span>GitHub Actions</span></div>
+        <div class="link-row"><a class="detail-link" href="case-09.html">Read the case study (JA) <span>→</span></a><a class="repo-link live" href="https://haru-ki417.github.io/QuantScope/" target="_blank" rel="noopener">Open the app ↗</a><a class="repo-link" href="https://github.com/haru-ki417/QuantScope" target="_blank" rel="noopener">Source code ↗</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="achievements" id="achievements">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">03 — ACTIVITIES</div>
+      <h2>Activities</h2>
+      <p>A record of learning and challenges.</p>
+    </div>
+    <div class="achieve-grid reveal-stagger"><div class="achieve-cell"><div class="ac-top"><div class="ac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div><span class="ac-id">@haru_ki</span></div>
+        <h4>AtCoder</h4><p>Training algorithms and data structures through regular programming contests.</p><a class="ac-link" href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">Profile ↗</a></div><div class="achieve-cell"><div class="ac-top"><div class="ac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 7.5v9M9 12l5-4.5M10.5 11l4 5.5"/></svg></div><span class="ac-id">haruki0417</span></div>
+        <h4>Kaggle</h4><p>Working on data analysis and modeling with real-world datasets.</p><a class="ac-link" href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">Profile ↗</a></div><div class="achieve-cell"><div class="ac-top"><div class="ac-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></div><span class="ac-id">haru-ki417</span></div>
+        <h4>GitHub</h4><p>MyDicomViewer, Pulse & Mind Study, TremorScope, VolumeScope and QuantScope are open source (MIT), and the source of my game Abbild is public too — all built and tested by CI, with browser editions deployed to GitHub Pages automatically.</p><a class="ac-link" href="https://github.com/haru-ki417" target="_blank" rel="noopener">Profile ↗</a></div></div>
+    <ul class="activity-list reveal"><li><span class="a-tag">INTERNSHIP</span><span class="a-title">Rakuten Group “Natsu no Jin”<small>Hackathon-style short-term internship</small></span><span class="a-status">Completed</span></li><li><span class="a-tag">HACKATHON</span><span class="a-title">Team lead, “Life &amp; Medical Hackers”<small>Built AI-SHOW, an rPPG-based interview support service</small></span><a class="a-status" href="#p-aishow">CASE 05 →</a></li><li><span class="a-tag">CERTIFICATION</span><span class="a-title">Fundamental IT Engineer Exam (FE)<small>Microsoft Azure AZ-900 / AI-900 / DP-900</small></span><span class="a-status">4 certs</span></li></ul>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap reveal">
+    <div class="label">04 — CONTACT</div>
+    <h2>I’d love to hear<br>from you.</h2>
+    <p class="sub">Whether it’s about an internship, a role, or one of the projects above — feel free to reach out.</p>
+    <div class="contact-layout">
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:hrk417506@gmail.com">
+          <span><span class="cc-label">EMAIL</span><span class="cc-value">hrk417506@gmail.com</span></span><span class="cc-arr">→</span>
+        </a>
+        <a class="contact-card" href="https://github.com/haru-ki417" target="_blank" rel="noopener">
+          <span><span class="cc-label">GITHUB</span><span class="cc-value">haru-ki417</span></span><span class="cc-arr">↗</span>
+        </a>
+        <a class="contact-card" href="https://atcoder.jp/users/haru_ki" target="_blank" rel="noopener">
+          <span><span class="cc-label">ATCODER</span><span class="cc-value">haru_ki</span></span><span class="cc-arr">↗</span>
+        </a>
+        <a class="contact-card" href="https://www.kaggle.com/haruki0417" target="_blank" rel="noopener">
+          <span><span class="cc-label">KAGGLE</span><span class="cc-value">haruki0417</span></span><span class="cc-arr">↗</span>
+        </a>
+      </div>
+      <form class="contact-form" id="contact-form" data-to="hrk417506@gmail.com" data-subject="Contact via portfolio">
+        <div class="field"><label for="cf-name">Name</label><input id="cf-name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="cf-email">Email</label><input id="cf-email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="cf-message">Message</label><textarea id="cf-message" rows="5" required></textarea></div>
+        <button class="btn primary" type="submit">Compose email <span class="arr">→</span></button>
+        <div class="form-note">Submitting opens your mail app with this message pre-filled.</div>
+      </form>
+    </div>
+    <div class="copyright"><span>© 2026 Haruki Takahashi</span><span>Doshisha University / Medical Informatics</span></div>
+  </div>
+</footer>
+
+<div id="totop" role="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+<script src="assets/main.js"></script>
+</body>
+</html>
