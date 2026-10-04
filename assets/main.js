@@ -151,7 +151,7 @@
   }
 
   /* ------------------------------------------------------------ 絞り込み */
-  var cards = $$('.card');
+  var cards = $$('.proj');
   var chips = $$('.chip');
   var chBtns = $$('.ch');
   var count = $('#count'), empty = $('#empty');
@@ -207,27 +207,17 @@
     card.classList.remove('is-play');
     if (v && !v.paused) v.pause();
   }
+  // 画面に半分以上見えている制作物の動画だけを再生する
   var inViewObs = null;
   function refreshInView() { if (inViewObs) { cards.forEach(function (c) { inViewObs.unobserve(c); inViewObs.observe(c); }); } }
-  if (cards.length) {
-    if (finePointer.matches) {
-      cards.forEach(function (card) {
-        card.addEventListener('mouseenter', function () { playCard(card); });
-        card.addEventListener('mouseleave', function () { pauseCard(card); });
-        card.addEventListener('focusin', function () { playCard(card); });
-        card.addEventListener('focusout', function () { pauseCard(card); });
+  if (cards.length && 'IntersectionObserver' in window) {
+    inViewObs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting && e.intersectionRatio >= .5 && !e.target.classList.contains('is-hidden')) playCard(e.target);
+        else pauseCard(e.target);
       });
-    } else {
-      // タッチの画面では、画面の中央付近にあるカードを 1 枚だけ再生する
-      var ratios = new Map();
-      inViewObs = new IntersectionObserver(function (es) {
-        es.forEach(function (e) { ratios.set(e.target, e.isIntersecting ? e.intersectionRatio : 0); });
-        var best = null, br = .6;
-        ratios.forEach(function (r, el) { if (r >= br && !el.classList.contains('is-hidden')) { best = el; br = r; } });
-        cards.forEach(function (c) { if (c === best) playCard(c); else pauseCard(c); });
-      }, { threshold: [0, .6, .8, 1], rootMargin: '-15% 0px -15% 0px' });
-      cards.forEach(function (c) { inViewObs.observe(c); });
-    }
+    }, { threshold: [0, .5, 1] });
+    cards.forEach(function (c) { inViewObs.observe(c); });
   }
 
   /* ------------------------------------------------------------ 技術と制作物のつながり */
