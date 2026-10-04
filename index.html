@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>髙橋 春喜 ポートフォリオ</title>
-<meta name="description" content="同志社大学 生命医科学部で医療情報学を専攻する髙橋春喜のポートフォリオ。AI搭載DICOMビューア、心拍や体の動きで遊ぶRPG、地震アラート装置、USB構成管理、rPPGによる非接触バイタル推定、学習と体調の記録Webアプリ、振戦の測定補助ソフト、CT 3Dワークステーション、顕微鏡画像の解析アプリの9つの制作物を掲載。多くはブラウザーからそのまま試せます。">
+<meta name="description" content="同志社大学 生命医科学部で医療情報学を専攻する髙橋春喜のポートフォリオ。AI搭載DICOMビューア、心拍や体の動きで遊ぶRPG、揺れ検知アラーム（QuakeScope）、USB構成管理、rPPGによる非接触バイタル推定、学習と体調の記録Webアプリ、振戦の測定補助ソフト、CT 3Dワークステーション、顕微鏡画像の解析アプリの9つの制作物を掲載。多くはブラウザーからそのまま試せます。">
 <meta name="theme-color" content="#0d1b24" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#fcf9f9" media="(prefers-color-scheme: light)">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="髙橋 春喜 ポートフォリオ">
-<meta property="og:description" content="同志社大学 生命医科学部で医療情報学を専攻する髙橋春喜のポートフォリオ。AI搭載DICOMビューア、心拍や体の動きで遊ぶRPG、地震アラート装置、USB構成管理、rPPGによる非接触バイタル推定、学習と体調の記録Webアプリ、振戦の測定補助ソフト、CT 3Dワークステーション、顕微鏡画像の解析アプリの9つの制作物を掲載。多くはブラウザーからそのまま試せます。">
+<meta property="og:description" content="同志社大学 生命医科学部で医療情報学を専攻する髙橋春喜のポートフォリオ。AI搭載DICOMビューア、心拍や体の動きで遊ぶRPG、揺れ検知アラーム（QuakeScope）、USB構成管理、rPPGによる非接触バイタル推定、学習と体調の記録Webアプリ、振戦の測定補助ソフト、CT 3Dワークステーション、顕微鏡画像の解析アプリの9つの制作物を掲載。多くはブラウザーからそのまま試せます。">
 <meta property="og:image" content="https://haru-ki417.github.io/portfolio/assets/og-image.png">
 <meta property="og:url" content="https://haru-ki417.github.io/portfolio/index.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -60,7 +60,7 @@
           <canvas class="ch-trace" aria-hidden="true"></canvas>
         </button>
         <button class="ch c-cloud" type="button" data-ch="cloud" data-wave="capno" aria-pressed="false">
-          <span class="ch-label">クラウド・Web</span><span class="ch-num">4</span>
+          <span class="ch-label">クラウド・Web</span><span class="ch-num">5</span>
           <canvas class="ch-trace" aria-hidden="true"></canvas>
         </button></div>
       <p class="mon-hint">チャンネルを押すと、制作物を絞り込めます</p>
@@ -118,19 +118,19 @@
         <div class="pj-links"><a href="https://github.com/haru-ki417/Abbild" target="_blank" rel="noopener">ソースコード</a></div>
       </div>
     </article>
-    <article class="proj c-hw" data-ch="hw" data-try="0" id="p-quake">
-      <a class="pj-media" href="case-03.html" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" poster="assets/clips/quake-poster.jpg" aria-hidden="true"><source src="assets/clips/quake.mp4" type="video/mp4"></video><span class="tags"><span class="tag t-hw">ハードウェア</span></span></a>
+    <article class="proj c-hw" data-ch="hw cloud" data-try="1" id="p-quake">
+      <a class="pj-media" href="case-03.html" tabindex="-1" aria-hidden="true"><video muted loop playsinline preload="none" poster="assets/clips/quake-poster.jpg" aria-hidden="true"><source src="assets/clips/quake.mp4" type="video/mp4"></video><span class="tags"><span class="tag t-hw">ハードウェア</span><span class="tag t-cloud">クラウド・Web</span></span></a>
       <div class="pj-text">
         <p class="pj-cat">組み込み × IoT</p>
-        <h3><a href="case-03.html">地震即時アラートシステム</a></h3>
-        <div class="pj-meta"><span>個人開発</span><span>Arduino Uno + ESP-01S</span></div>
-        <p class="pj-tag">揺れを検知した瞬間、スマートフォンに通知が届く。地震アラート装置を一式自作。</p>
-        <p class="pj-body">3軸加速度センサーの生値をキャリブレーションで補正して揺れの大きさを算出し、OLEDに波形履歴を表示。揺れに応じた2段階の警戒レベルでブザーの間隔と音程を変え、画面を見なくても危険度が伝わるようにしました。</p>
-        
-        <ul class="pj-points"><li>ゼロ点オフセットと感度のキャリブレーションによる、揺れ量のリアルタイム算出</li><li>警戒レベルに応じて、ブザー・LED・OLED表示を切り替え</li><li>ESP-01SからTelegram Bot APIを経由して、スマートフォンへプッシュ通知</li></ul>
-        <div class="pj-stack"><span>Arduino (C/C++)</span><span>ESP-01S</span><span>3軸加速度センサー</span><span>RTC</span><span>Telegram Bot API</span></div>
-        <div class="pj-acts"><a class="btn ghost sm" href="case-03.html">詳しく見る</a></div>
-        
+        <h3><a href="case-03.html">QuakeScope（揺れ検知アラーム）</a></h3>
+        <div class="pj-meta"><span>個人開発</span><span>ESP32 ・ ブラウザー</span></div>
+        <p class="pj-tag">置いた場所の揺れから、気象庁の計測震度と同じ考え方で「震度相当」を出し、強い揺れで警報音とスマホへの通知。試作機を、組み立てて使える製品の形に作り直しました。</p>
+        <p class="pj-body">Arduino Unoの試作機を、ESP32 1枚で作り直しました。判定エンジンはC++で書き、本体とブラウザー（WebAssembly）で同じものが動きます。気象庁の周波数フィルターを100 Hzで動くIIRフィルターに合わせ、揺れの最中から震度相当を計算。P波でとらえ、ドアや足音・センサーの雑音では鳴りません。初期設定はスマホから、通知はLINE・Telegram・Discord・メール。ケースと基板の設計、部品表、組み立て手順までそろえました。</p>
+        <dl class="pj-num"><div><dt>気象庁の計算方法との差（最大）</dt><dd>0.07</dd></div><div><dt>P 波から検知まで（以内）</dt><dd>1.5 秒</dd></div><div><dt>テスト</dt><dd>26</dd></div><div><dt>通知先</dt><dd>4</dd></div></dl>
+        <ul class="pj-points"><li>気象庁の計測震度のフィルターをIIR 5段に合わせ、「0.3秒の値」を30個の最小ヒープで求めて、揺れの最中に震度相当を更新（見本96本で最大の差0.072）</li><li>STA/LTAでP波をとらえ、「揺れが続いたか」と「雑音の床」で、衝撃やセンサーの雑音では鳴らない。雑音を入れた見本で見つけた不具合も、テストにして直した</li><li>同じC++を本体とWebAssemblyで動かし、ブラウザーで見本の地震やスマホのセンサーを試せる。ケースは寸法を変えて作り直せる</li></ul>
+        <div class="pj-stack"><span>C++17</span><span>ESP32 (Arduino)</span><span>FreeRTOS</span><span>WebAssembly</span><span>信号処理</span><span>MPU6050</span><span>LINE・Telegram・Discord・SMTP</span><span>3D プリント</span><span>GitHub Actions</span></div>
+        <div class="pj-acts"><button class="btn primary sm" type="button" data-try="https://haru-ki417.github.io/QuakeScope/" data-title="QuakeScope（揺れ検知アラーム）" data-device="desktop" data-note="「見本の揺れ」から試せます。スマホの加速度センサーで測るときは、新しいタブで開いてください。">その場で試す</button><a class="btn ghost sm" href="case-03.html">詳しく見る</a></div>
+        <div class="pj-links"><a href="https://github.com/haru-ki417/QuakeScope" target="_blank" rel="noopener">ソースコード</a></div>
       </div>
     </article>
     <article class="proj c-none flip" data-ch="" data-try="0" id="p-usb">
@@ -232,9 +232,9 @@
   <div class="wrap">
     <div class="sec-head"><h2 class="h2">技術と制作物のつながり</h2><p>技術を選ぶと、それを使った制作物が光ります。制作物を選ぶと、使った技術が光ります。</p></div>
     <div class="map" id="map">
-      <div class="map-col map-sk"><div class="sk-group"><h3>つくる</h3><button class="node sk" type="button" data-sk="csharp" aria-pressed="false">C# / .NET</button><button class="node sk" type="button" data-sk="wpf" aria-pressed="false">WPF</button><button class="node sk" type="button" data-sk="blazor" aria-pressed="false">Blazor</button><button class="node sk" type="button" data-sk="monogame" aria-pressed="false">MonoGame</button><button class="node sk" type="button" data-sk="nextjs" aria-pressed="false">Next.js / FastAPI</button><button class="node sk" type="button" data-sk="js" aria-pressed="false">JavaScript</button><button class="node sk" type="button" data-sk="python" aria-pressed="false">Python</button><button class="node sk" type="button" data-sk="ps" aria-pressed="false">PowerShell</button></div><div class="sk-group"><h3>解析する</h3><button class="node sk" type="button" data-sk="dsp" aria-pressed="false">信号処理</button><button class="node sk" type="button" data-sk="imgproc" aria-pressed="false">画像処理</button><button class="node sk" type="button" data-sk="pytorch" aria-pressed="false">PyTorch / ONNX</button><button class="node sk" type="button" data-sk="dicom" aria-pressed="false">DICOM</button></div><div class="sk-group"><h3>つなぐ</h3><button class="node sk" type="button" data-sk="arduino" aria-pressed="false">Arduino</button><button class="node sk" type="button" data-sk="esp" aria-pressed="false">ESP32 / ESP-01S</button><button class="node sk" type="button" data-sk="azure" aria-pressed="false">Azure</button><button class="node sk" type="button" data-sk="wasm" aria-pressed="false">WebAssembly</button><button class="node sk" type="button" data-sk="ci" aria-pressed="false">GitHub Actions</button></div></div>
+      <div class="map-col map-sk"><div class="sk-group"><h3>つくる</h3><button class="node sk" type="button" data-sk="csharp" aria-pressed="false">C# / .NET</button><button class="node sk" type="button" data-sk="cpp" aria-pressed="false">C++</button><button class="node sk" type="button" data-sk="wpf" aria-pressed="false">WPF</button><button class="node sk" type="button" data-sk="blazor" aria-pressed="false">Blazor</button><button class="node sk" type="button" data-sk="monogame" aria-pressed="false">MonoGame</button><button class="node sk" type="button" data-sk="nextjs" aria-pressed="false">Next.js / FastAPI</button><button class="node sk" type="button" data-sk="js" aria-pressed="false">JavaScript</button><button class="node sk" type="button" data-sk="python" aria-pressed="false">Python</button><button class="node sk" type="button" data-sk="ps" aria-pressed="false">PowerShell</button></div><div class="sk-group"><h3>解析する</h3><button class="node sk" type="button" data-sk="dsp" aria-pressed="false">信号処理</button><button class="node sk" type="button" data-sk="imgproc" aria-pressed="false">画像処理</button><button class="node sk" type="button" data-sk="pytorch" aria-pressed="false">PyTorch / ONNX</button><button class="node sk" type="button" data-sk="dicom" aria-pressed="false">DICOM</button></div><div class="sk-group"><h3>つなぐ</h3><button class="node sk" type="button" data-sk="arduino" aria-pressed="false">Arduino</button><button class="node sk" type="button" data-sk="esp" aria-pressed="false">ESP32 / ESP-01S</button><button class="node sk" type="button" data-sk="azure" aria-pressed="false">Azure</button><button class="node sk" type="button" data-sk="wasm" aria-pressed="false">WebAssembly</button><button class="node sk" type="button" data-sk="ci" aria-pressed="false">GitHub Actions</button></div></div>
       <svg class="map-lines" id="map-lines" aria-hidden="true"></svg>
-      <div class="map-col map-pj"><button class="node pj c-img" type="button" data-pj="p-dicom" data-sks="csharp wpf blazor wasm python pytorch imgproc dicom azure ci" aria-pressed="false"><b>MyDicomViewer</b><small>医療画像 × オンデバイスAI</small></button><button class="node pj c-bio" type="button" data-pj="p-abbild" data-sks="csharp monogame blazor wasm arduino ci" aria-pressed="false"><b>Abbild</b><small>生体センサー × ゲーム</small></button><button class="node pj c-hw" type="button" data-pj="p-quake" data-sks="arduino esp" aria-pressed="false"><b>地震即時アラートシステム</b><small>組み込み × IoT</small></button><button class="node pj c-none" type="button" data-pj="p-usb" data-sks="ps" aria-pressed="false"><b>Ultimate USB</b><small>システム管理 × 自動化</small></button><button class="node pj c-bio" type="button" data-pj="p-aishow" data-sks="nextjs python dsp js" aria-pressed="false"><b>AI-SHOW（相性）</b><small>チーム開発 × 生体信号</small></button><button class="node pj c-bio" type="button" data-pj="p-pulsemind" data-sks="csharp blazor azure arduino ci" aria-pressed="false"><b>Pulse & Mind Study</b><small>学習記録 × 生体データ</small></button><button class="node pj c-bio" type="button" data-pj="p-tremor" data-sks="csharp wpf blazor wasm esp azure dsp dicom ci" aria-pressed="false"><b>TremorScope</b><small>振戦測定 × 信号処理</small></button><button class="node pj c-img" type="button" data-pj="p-volume" data-sks="csharp wpf blazor wasm imgproc dicom ci" aria-pressed="false"><b>VolumeScope</b><small>CT 3D × 画像処理</small></button><button class="node pj c-img" type="button" data-pj="p-quant" data-sks="csharp wpf blazor wasm imgproc dicom ci" aria-pressed="false"><b>QuantScope</b><small>顕微鏡画像 × 画像解析</small></button></div>
+      <div class="map-col map-pj"><button class="node pj c-img" type="button" data-pj="p-dicom" data-sks="csharp wpf blazor wasm python pytorch imgproc dicom azure ci" aria-pressed="false"><b>MyDicomViewer</b><small>医療画像 × オンデバイスAI</small></button><button class="node pj c-bio" type="button" data-pj="p-abbild" data-sks="csharp monogame blazor wasm arduino ci" aria-pressed="false"><b>Abbild</b><small>生体センサー × ゲーム</small></button><button class="node pj c-hw" type="button" data-pj="p-quake" data-sks="cpp esp wasm dsp js ci" aria-pressed="false"><b>QuakeScope（揺れ検知アラーム）</b><small>組み込み × IoT</small></button><button class="node pj c-none" type="button" data-pj="p-usb" data-sks="ps" aria-pressed="false"><b>Ultimate USB</b><small>システム管理 × 自動化</small></button><button class="node pj c-bio" type="button" data-pj="p-aishow" data-sks="nextjs python dsp js" aria-pressed="false"><b>AI-SHOW（相性）</b><small>チーム開発 × 生体信号</small></button><button class="node pj c-bio" type="button" data-pj="p-pulsemind" data-sks="csharp blazor azure arduino ci" aria-pressed="false"><b>Pulse & Mind Study</b><small>学習記録 × 生体データ</small></button><button class="node pj c-bio" type="button" data-pj="p-tremor" data-sks="csharp wpf blazor wasm esp azure dsp dicom ci" aria-pressed="false"><b>TremorScope</b><small>振戦測定 × 信号処理</small></button><button class="node pj c-img" type="button" data-pj="p-volume" data-sks="csharp wpf blazor wasm imgproc dicom ci" aria-pressed="false"><b>VolumeScope</b><small>CT 3D × 画像処理</small></button><button class="node pj c-img" type="button" data-pj="p-quant" data-sks="csharp wpf blazor wasm imgproc dicom ci" aria-pressed="false"><b>QuantScope</b><small>顕微鏡画像 × 画像解析</small></button></div>
     </div>
   </div>
 </section>
